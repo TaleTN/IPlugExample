@@ -9,3 +9,8 @@
 
 # Windows makefile
 Makefile text=auto
+
+# Visual Studio project
+*.sln             text eol=crlf
+*.vcxproj         text eol=crlf
+*.vcxproj.filters text eol=crlf

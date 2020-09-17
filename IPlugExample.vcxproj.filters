@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\IPlug">
+      <UniqueIdentifier>{f5b596c1-70bc-4d5b-8ac4-36d64bd0e566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VST2_SDK">
+      <UniqueIdentifier>{ccc7f790-8373-4935-9ac6-d68a0ffa96cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WDL\libpng">
+      <UniqueIdentifier>{889b1b6c-f402-49ef-a8a9-07b0010f4f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WDL\lice">
+      <UniqueIdentifier>{6eb96063-ed8f-4250-8be0-b88506df7ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WDL\zlib">
+      <UniqueIdentifier>{e46d0efe-98c4-4709-bc0c-4919360364c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WDL">
+      <UniqueIdentifier>{a8257943-c8d4-4679-96f6-a1b9401c119f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{dcd598ac-9d27-4d27-b7da-ffb492707a55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\IPlug">
+      <UniqueIdentifier>{7fc73954-331d-49c8-ab85-66124db74d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WDL\libpng">
+      <UniqueIdentifier>{bbc00214-84cc-4c32-ba2c-5a1d7109b29a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WDL\lice">
+      <UniqueIdentifier>{f3339e84-c2a4-481a-8fed-3fe095013f13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WDL\zlib">
+      <UniqueIdentifier>{37c3d7e0-3ddd-4c6d-95d9-e3bd6eb3de62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WDL">
+      <UniqueIdentifier>{7c77c0ac-0058-4e0e-83a7-50e6fcaf4fa4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IPlug\Containers.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\Hosts.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IControl.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IGraphics.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IGraphicsWin.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IParam.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IPlug_include_in_plug_hdr.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IPlug_include_in_plug_src.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IPlugBase.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IPlugStructs.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlug\IPlugVST2.h">
+      <Filter>Header Files\IPlug</Filter>
+    </ClInclude>
+    <ClInclude Include="VST2_SDK\aeffect.h">
+      <Filter>Header Files\VST2_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="VST2_SDK\aeffectx.h">
+      <Filter>Header Files\VST2_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="VST2_SDK\vstfxstore.h">
+      <Filter>Header Files\VST2_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\png.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pngconf.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pngdebug.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pnginfo.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pnglibconf.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pngpriv.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\libpng\pngstruct.h">
+      <Filter>Header Files\WDL\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\curverasterbuffer.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\lice.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\lice_bezier.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\lice_combine.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\lice_extended.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\lice\lice_text.h">
+      <Filter>Header Files\WDL\lice</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\crc32.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\inffast.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\inffixed.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\inflate.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\inftrees.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\trees.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\zconf.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\zlib.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\zlib\zutil.h">
+      <Filter>Header Files\WDL\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\assocarray.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\db2val.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\denormal.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\heapbuf.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\mergesort.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\mutex.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\ptrlist.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\queue.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\wdlatomic.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\wdlcstring.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\wdlendian.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\wdlstring.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="WDL\wdltypes.h">
+      <Filter>Header Files\WDL</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlugExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img\bg.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\bg%402x.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\bypass.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\bypass%402x.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\handle.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\handle%402x.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\knob.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\knob%402x.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\shape.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\shape%402x.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="IPlugExample.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IPlug\Hosts.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IControl.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IGraphics.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IGraphicsWin.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IParam.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IPlugBase.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IPlugStructs.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlug\IPlugVST2.cpp">
+      <Filter>Source Files\IPlug</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\png.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngerror.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngget.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngmem.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngread.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngrio.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngrtran.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngrutil.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngset.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\libpng\pngtrans.c">
+      <Filter>Source Files\WDL\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\lice\lice.cpp">
+      <Filter>Source Files\WDL\lice</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\lice\lice_arc.cpp">
+      <Filter>Source Files\WDL\lice</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\lice\lice_line.cpp">
+      <Filter>Source Files\WDL\lice</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\lice\lice_png.cpp">
+      <Filter>Source Files\WDL\lice</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\lice\lice_textnew.cpp">
+      <Filter>Source Files\WDL\lice</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\adler32.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\crc32.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\infback.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inffast.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inflate.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inftrees.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\trees.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\zutil.c">
+      <Filter>Source Files\WDL\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlugExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

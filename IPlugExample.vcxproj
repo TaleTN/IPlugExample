@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{B6CCC943-B5FA-4802-BDC7-DF8972698857}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WDL_DENORMAL_WANTS_SCOPED_FTZ;_DEBUG;DEBUG</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/favor:blend %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <CallingConvention />
+      <ForceConformanceInForLoopScope />
+      <RemoveUnreferencedCodeData />
+      <TreatWChar_tAsBuiltInType />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ManifestFile />
+      <EnableUAC />
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>advapi32.lib;comctl32.lib;comdlg32.lib;gdi32.lib;ole32.lib;shell32.lib;user32.lib;wininet.lib</AdditionalDependencies>
+      <TypeLibraryResourceID />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WDL_DENORMAL_WANTS_SCOPED_FTZ;$(ndebug)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/favor:blend %(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization Condition="'$(ndebug)'!=''">true</WholeProgramOptimization>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CallingConvention />
+      <ForceConformanceInForLoopScope />
+      <RemoveUnreferencedCodeData />
+      <TreatWChar_tAsBuiltInType />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ManifestFile />
+      <EnableUAC />
+      <TargetMachine>MachineX64</TargetMachine>
+      <LinkTimeCodeGeneration Condition="'$(ndebug)'!=''">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalOptions>/defaultlib:libcmt %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>advapi32.lib;comctl32.lib;comdlg32.lib;gdi32.lib;ole32.lib;shell32.lib;user32.lib;wininet.lib</AdditionalDependencies>
+      <TypeLibraryResourceID />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WDL_DENORMAL_WANTS_SCOPED_FTZ;_DEBUG;DEBUG</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <CallingConvention />
+      <ForceConformanceInForLoopScope />
+      <RemoveUnreferencedCodeData />
+      <TreatWChar_tAsBuiltInType />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ManifestFile />
+      <EnableUAC />
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>advapi32.lib;comctl32.lib;comdlg32.lib;gdi32.lib;ole32.lib;shell32.lib;user32.lib;wininet.lib</AdditionalDependencies>
+      <TypeLibraryResourceID />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;WDL_DENORMAL_WANTS_SCOPED_FTZ;$(ndebug)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <WholeProgramOptimization Condition="'$(ndebug)'!=''">true</WholeProgramOptimization>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CallingConvention />
+      <ForceConformanceInForLoopScope />
+      <RemoveUnreferencedCodeData />
+      <TreatWChar_tAsBuiltInType />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ManifestFile />
+      <EnableUAC />
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration Condition="'$(ndebug)'!=''">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalOptions>/defaultlib:libcmt %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>advapi32.lib;comctl32.lib;comdlg32.lib;gdi32.lib;ole32.lib;shell32.lib;user32.lib;wininet.lib</AdditionalDependencies>
+      <TypeLibraryResourceID />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="IPlug\Containers.h" />
+    <ClInclude Include="IPlug\Hosts.h" />
+    <ClInclude Include="IPlug\IControl.h" />
+    <ClInclude Include="IPlug\IGraphics.h" />
+    <ClInclude Include="IPlug\IGraphicsWin.h" />
+    <ClInclude Include="IPlug\IParam.h" />
+    <ClInclude Include="IPlug\IPlug_include_in_plug_hdr.h" />
+    <ClInclude Include="IPlug\IPlug_include_in_plug_src.h" />
+    <ClInclude Include="IPlug\IPlugBase.h" />
+    <ClInclude Include="IPlug\IPlugStructs.h" />
+    <ClInclude Include="IPlug\IPlugVST2.h" />
+    <ClInclude Include="VST2_SDK\aeffect.h" />
+    <ClInclude Include="VST2_SDK\aeffectx.h" />
+    <ClInclude Include="VST2_SDK\vstfxstore.h" />
+    <ClInclude Include="WDL\libpng\png.h" />
+    <ClInclude Include="WDL\libpng\pngconf.h" />
+    <ClInclude Include="WDL\libpng\pngdebug.h" />
+    <ClInclude Include="WDL\libpng\pnginfo.h" />
+    <ClInclude Include="WDL\libpng\pnglibconf.h" />
+    <ClInclude Include="WDL\libpng\pngpriv.h" />
+    <ClInclude Include="WDL\libpng\pngstruct.h" />
+    <ClInclude Include="WDL\lice\curverasterbuffer.h" />
+    <ClInclude Include="WDL\lice\lice.h" />
+    <ClInclude Include="WDL\lice\lice_bezier.h" />
+    <ClInclude Include="WDL\lice\lice_combine.h" />
+    <ClInclude Include="WDL\lice\lice_extended.h" />
+    <ClInclude Include="WDL\lice\lice_text.h" />
+    <ClInclude Include="WDL\zlib\crc32.h" />
+    <ClInclude Include="WDL\zlib\inffast.h" />
+    <ClInclude Include="WDL\zlib\inffixed.h" />
+    <ClInclude Include="WDL\zlib\inflate.h" />
+    <ClInclude Include="WDL\zlib\inftrees.h" />
+    <ClInclude Include="WDL\zlib\trees.h" />
+    <ClInclude Include="WDL\zlib\zconf.h" />
+    <ClInclude Include="WDL\zlib\zlib.h" />
+    <ClInclude Include="WDL\zlib\zutil.h" />
+    <ClInclude Include="WDL\assocarray.h" />
+    <ClInclude Include="WDL\db2val.h" />
+    <ClInclude Include="WDL\denormal.h" />
+    <ClInclude Include="WDL\heapbuf.h" />
+    <ClInclude Include="WDL\mergesort.h" />
+    <ClInclude Include="WDL\mutex.h" />
+    <ClInclude Include="WDL\ptrlist.h" />
+    <ClInclude Include="WDL\queue.h" />
+    <ClInclude Include="WDL\wdlatomic.h" />
+    <ClInclude Include="WDL\wdlcstring.h" />
+    <ClInclude Include="WDL\wdlendian.h" />
+    <ClInclude Include="WDL\wdlstring.h" />
+    <ClInclude Include="WDL\wdltypes.h" />
+    <ClInclude Include="IPlugExample.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img\bg.png" />
+    <Image Include="img\bg%402x.png" />
+    <Image Include="img\bypass.png" />
+    <Image Include="img\bypass%402x.png" />
+    <Image Include="img\handle.png" />
+    <Image Include="img\handle%402x.png" />
+    <Image Include="img\knob.png" />
+    <Image Include="img\knob%402x.png" />
+    <Image Include="img\shape.png" />
+    <Image Include="img\shape%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="IPlugExample.rc">
+      <PreprocessorDefinitions>VST2_API</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IPlug\Hosts.cpp" />
+    <ClCompile Include="IPlug\IControl.cpp" />
+    <ClCompile Include="IPlug\IGraphics.cpp" />
+    <ClCompile Include="IPlug\IGraphicsWin.cpp" />
+    <ClCompile Include="IPlug\IParam.cpp" />
+    <ClCompile Include="IPlug\IPlugBase.cpp" />
+    <ClCompile Include="IPlug\IPlugStructs.cpp" />
+    <ClCompile Include="IPlug\IPlugVST2.cpp" />
+    <ClCompile Include="WDL\libpng\png.c" />
+    <ClCompile Include="WDL\libpng\pngerror.c" />
+    <ClCompile Include="WDL\libpng\pngget.c" />
+    <ClCompile Include="WDL\libpng\pngmem.c" />
+    <ClCompile Include="WDL\libpng\pngread.c" />
+    <ClCompile Include="WDL\libpng\pngrio.c" />
+    <ClCompile Include="WDL\libpng\pngrtran.c" />
+    <ClCompile Include="WDL\libpng\pngrutil.c" />
+    <ClCompile Include="WDL\libpng\pngset.c" />
+    <ClCompile Include="WDL\libpng\pngtrans.c" />
+    <ClCompile Include="WDL\lice\lice.cpp" />
+    <ClCompile Include="WDL\lice\lice_arc.cpp" />
+    <ClCompile Include="WDL\lice\lice_line.cpp" />
+    <ClCompile Include="WDL\lice\lice_png.cpp" />
+    <ClCompile Include="WDL\lice\lice_textnew.cpp" />
+    <ClCompile Include="WDL\zlib\adler32.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\crc32.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\infback.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inffast.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inflate.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\inftrees.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\trees.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="WDL\zlib\zutil.c">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="IPlugExample.cpp">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);VST2_API</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
