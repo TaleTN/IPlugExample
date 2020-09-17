@@ -1,0 +1,8 @@
+.gitattributes text=auto
+
+*.c   text=auto
+*.cpp text=auto
+*.h   text=auto
+*.mm  text=auto
+*.rc  text=auto
+*.txt text=auto
