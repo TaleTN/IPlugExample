@@ -6,3 +6,6 @@
 *.mm  text=auto
 *.rc  text=auto
 *.txt text=auto
+
+# Windows makefile
+Makefile text=auto
