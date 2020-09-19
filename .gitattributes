@@ -9,6 +9,7 @@
 *.txt text=auto
 
 *.cmd text eol=crlf
+*.sh  text eol=lf
 
 # Windows makefile
 Makefile text=auto
