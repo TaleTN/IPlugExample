@@ -14,10 +14,9 @@ PlugExample::PlugExample(void* const instanceInfo)
 	pParam->SetGlobal(true);
 	AddParam(kParamBypass, pParam);
 
-	// (exp(curve*0.5) - 1) / (exp(curve) - 1) = (4 - 0.1) / (20 - 0.1)
-	static const double curve = 2.8232243382083610;
-
+	const double curve = IParam::GetExpShape((4.0 - 0.1) / (20.0 - 0.1));
 	AddParam(kParamRate, new IDoubleExpParam(curve, "Rate", 4.0, 0.1, 20.0, 2, "Hz"));
+
 	AddParam(kParamDepth, new IDoubleParam("Depth", 12.0, 0.0, 24.0, 1, "dB"));
 	AddParam(kParamShape, new IBoolParam("Shape", false, "Sine", "Square"));
 
