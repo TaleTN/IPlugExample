@@ -55,11 +55,11 @@ PlugExample::PlugExample(void* const instanceInfo)
 
 	// Multibitmap knob linked to rate parameter.
 	const IBitmap knob(KNOB_PNG_ID, 202, 174, 33);
-	IKnobMultiControl* const pRate = new IKnobMultiControl(this, 127, 212, kParamRate, &knob);
-	pRate->GetTargetRECT()->B += 32;
-	pRate->SetGearing(2.0);
-	pRate->SetTooltip("Tremolo Rate");
-	pGraphics->AttachControl(pRate);
+	IKnobMultiControl* const pKnob = new IKnobMultiControl(this, 127, 212, kParamRate, &knob);
+	pKnob->GetTargetRECT()->B += 32;
+	pKnob->SetGearing(2.0);
+	pKnob->SetTooltip("Tremolo Rate");
+	pGraphics->AttachControl(pKnob);
 
 	// Fader linked to depth parameter.
 	const IBitmap handle(HANDLE_PNG_ID, 128, 44);
