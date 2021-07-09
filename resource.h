@@ -12,8 +12,9 @@
 	#define BUNDLE_DOMAIN "com.TaleTN"
 	#define BUNDLE_NAME   "IPlugExample"
 
-	// To-do: Edit AU/VST-Info.plist to set CFBundleIdentifier to either
-	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME or BUNDLE_DOMAIN.vst.BUNDLE_NAME.
+	// To-do: Set Product Bundle Indentifier in Xcode project to
+	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME (AU target), and
+	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
 
 	// No spaces.
 	#define PLUG_ENTRY           PlugExample_Entry
@@ -26,7 +27,7 @@
 	// To-do: Create export file with two entries: PLUG_ENTRY and
 	// PLUG_VIEW_ENTRY, each with leading underscore (e.g. IPlugExample.exp
 	// with entries _PlugExample_Entry and _PlugExample_ViewEntry).
-	//
+
 	// To-do: Edit AU-Info.plist to set NSPrincipalClass to VIEW_CLASS.
 #endif
 
@@ -39,7 +40,7 @@
 	#define VERSIONINFO_STR        "0.8.0"
 	#define VERSIONINFO_PRERELEASE // Define if alpha, beta, or RC
 	// #define VERSIONINFO_CODE_NAME  "Project X"
-	#define VERSIONINFO_COPYRIGHT "© 2020 Theo Niessink"
+	#define VERSIONINFO_COPYRIGHT "© 2020, 2021 Theo Niessink"
 	#define VERSIONINFO_ORG_FILE   "IPlugExample.dll"
 
 // Apple version info (non-optional).

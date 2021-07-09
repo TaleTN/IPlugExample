@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.TaleTN.vst.$(PROJECT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,6 +19,6 @@
 	<key>CFBundleSignature</key>
 	<string>Iplg</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2020 Theo Niessink</string>
+	<string>© 2020, 2021 Theo Niessink</string>
 </dict>
 </plist>

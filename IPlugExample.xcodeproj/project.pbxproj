@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,7 +42,6 @@
 		3D529C3024584A5200527485 /* IGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C1924584A5000527485 /* IGraphics.cpp */; };
 		3D529C3124584A5200527485 /* Hosts.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1A24584A5000527485 /* Hosts.h */; };
 		3D529C3224584A5200527485 /* IControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C1B24584A5000527485 /* IControl.cpp */; };
-		3D529C3324584A5200527485 /* IGraphicsCarbon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1C24584A5000527485 /* IGraphicsCarbon.h */; };
 		3D529C3424584A5200527485 /* IPlugVST2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C1D24584A5000527485 /* IPlugVST2.cpp */; };
 		3D529C3524584A5200527485 /* IGraphicsMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1E24584A5000527485 /* IGraphicsMac.h */; };
 		3D529C3624584A5200527485 /* IPlug_include_in_plug_hdr.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1F24584A5000527485 /* IPlug_include_in_plug_hdr.h */; };
@@ -54,7 +53,6 @@
 		3D529C3C24584A5200527485 /* IPlugVST2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2524584A5100527485 /* IPlugVST2.h */; };
 		3D529C3D24584A5200527485 /* IPlugStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2624584A5100527485 /* IPlugStructs.h */; };
 		3D529C3E24584A5200527485 /* IControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2724584A5100527485 /* IControl.h */; };
-		3D529C3F24584A5200527485 /* IGraphicsCarbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2824584A5100527485 /* IGraphicsCarbon.cpp */; };
 		3D529C4024584A5200527485 /* IGraphicsCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2924584A5100527485 /* IGraphicsCocoa.h */; };
 		3D529C4124584A5200527485 /* Hosts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2A24584A5200527485 /* Hosts.cpp */; };
 		3D529C4224584A5200527485 /* IGraphicsCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */; };
@@ -131,8 +129,6 @@
 		3D738542246E954200582D74 /* IGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2324584A5100527485 /* IGraphics.h */; };
 		3D738543246E954400582D74 /* IGraphicsMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2C24584A5200527485 /* IGraphicsMac.mm */; };
 		3D738544246E954800582D74 /* IGraphicsMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1E24584A5000527485 /* IGraphicsMac.h */; };
-		3D738545246E954B00582D74 /* IGraphicsCarbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2824584A5100527485 /* IGraphicsCarbon.cpp */; };
-		3D738546246E954E00582D74 /* IGraphicsCarbon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1C24584A5000527485 /* IGraphicsCarbon.h */; };
 		3D738547246E955200582D74 /* IGraphicsCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */; };
 		3D738548246E955500582D74 /* IGraphicsCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2924584A5100527485 /* IGraphicsCocoa.h */; };
 		3D738549246E955900582D74 /* IParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2224584A5100527485 /* IParam.cpp */; };
@@ -258,7 +254,6 @@
 		3D529C1924584A5000527485 /* IGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphics.cpp; path = IPlug/IGraphics.cpp; sourceTree = "<group>"; };
 		3D529C1A24584A5000527485 /* Hosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hosts.h; path = IPlug/Hosts.h; sourceTree = "<group>"; };
 		3D529C1B24584A5000527485 /* IControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IControl.cpp; path = IPlug/IControl.cpp; sourceTree = "<group>"; };
-		3D529C1C24584A5000527485 /* IGraphicsCarbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCarbon.h; path = IPlug/IGraphicsCarbon.h; sourceTree = "<group>"; };
 		3D529C1D24584A5000527485 /* IPlugVST2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST2.cpp; path = IPlug/IPlugVST2.cpp; sourceTree = "<group>"; };
 		3D529C1E24584A5000527485 /* IGraphicsMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsMac.h; path = IPlug/IGraphicsMac.h; sourceTree = "<group>"; };
 		3D529C1F24584A5000527485 /* IPlug_include_in_plug_hdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlug_include_in_plug_hdr.h; path = IPlug/IPlug_include_in_plug_hdr.h; sourceTree = "<group>"; };
@@ -270,7 +265,6 @@
 		3D529C2524584A5100527485 /* IPlugVST2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST2.h; path = IPlug/IPlugVST2.h; sourceTree = "<group>"; };
 		3D529C2624584A5100527485 /* IPlugStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugStructs.h; path = IPlug/IPlugStructs.h; sourceTree = "<group>"; };
 		3D529C2724584A5100527485 /* IControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IControl.h; path = IPlug/IControl.h; sourceTree = "<group>"; };
-		3D529C2824584A5100527485 /* IGraphicsCarbon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IGraphicsCarbon.cpp; path = IPlug/IGraphicsCarbon.cpp; sourceTree = "<group>"; };
 		3D529C2924584A5100527485 /* IGraphicsCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsCocoa.h; path = IPlug/IGraphicsCocoa.h; sourceTree = "<group>"; };
 		3D529C2A24584A5200527485 /* Hosts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Hosts.cpp; path = IPlug/Hosts.cpp; sourceTree = "<group>"; };
 		3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGraphicsCocoa.mm; path = IPlug/IGraphicsCocoa.mm; sourceTree = "<group>"; };
@@ -419,8 +413,6 @@
 				3D529C2324584A5100527485 /* IGraphics.h */,
 				3D529C2C24584A5200527485 /* IGraphicsMac.mm */,
 				3D529C1E24584A5000527485 /* IGraphicsMac.h */,
-				3D529C2824584A5100527485 /* IGraphicsCarbon.cpp */,
-				3D529C1C24584A5000527485 /* IGraphicsCarbon.h */,
 				3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */,
 				3D529C2924584A5100527485 /* IGraphicsCocoa.h */,
 				3D27758125162D6300F354B7 /* IMidiQueue.h */,
@@ -605,7 +597,6 @@
 				3D73853E246E953600582D74 /* Hosts.h in Headers */,
 				3D738540246E953B00582D74 /* IControl.h in Headers */,
 				3D738542246E954200582D74 /* IGraphics.h in Headers */,
-				3D738546246E954E00582D74 /* IGraphicsCarbon.h in Headers */,
 				3D738548246E955500582D74 /* IGraphicsCocoa.h in Headers */,
 				3D738544246E954800582D74 /* IGraphicsMac.h in Headers */,
 				3D27758325162D6300F354B7 /* IMidiQueue.h in Headers */,
@@ -668,7 +659,6 @@
 				3D529C3124584A5200527485 /* Hosts.h in Headers */,
 				3D529C3E24584A5200527485 /* IControl.h in Headers */,
 				3D529C3A24584A5200527485 /* IGraphics.h in Headers */,
-				3D529C3324584A5200527485 /* IGraphicsCarbon.h in Headers */,
 				3D529C4024584A5200527485 /* IGraphicsCocoa.h in Headers */,
 				3D529C3524584A5200527485 /* IGraphicsMac.h in Headers */,
 				3D27758225162D6300F354B7 /* IMidiQueue.h in Headers */,
@@ -760,7 +750,7 @@
 			dependencies = (
 			);
 			name = VST2;
-			productName = IPlugExample;
+			productName = VST2;
 			productReference = 3DCA573024583673009F1E70 /* IPlugExample.vst */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -770,7 +760,7 @@
 		3DCA572824583673009F1E70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					3D43DA0F246E8C8D004AFF08 = {
@@ -782,11 +772,12 @@
 				};
 			};
 			buildConfigurationList = 3DCA572B24583673009F1E70 /* Build configuration list for PBXProject "IPlugExample" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3DCA572724583673009F1E70;
 			productRefGroup = 3DCA573124583673009F1E70 /* Products */;
@@ -857,7 +848,6 @@
 				3D73853D246E953100582D74 /* Hosts.cpp in Sources */,
 				3D73853F246E953800582D74 /* IControl.cpp in Sources */,
 				3D738541246E953F00582D74 /* IGraphics.cpp in Sources */,
-				3D738545246E954B00582D74 /* IGraphicsCarbon.cpp in Sources */,
 				3D738547246E955200582D74 /* IGraphicsCocoa.mm in Sources */,
 				3D738543246E954400582D74 /* IGraphicsMac.mm in Sources */,
 				3D738549246E955900582D74 /* IParam.cpp in Sources */,
@@ -900,7 +890,6 @@
 				3D529C4124584A5200527485 /* Hosts.cpp in Sources */,
 				3D529C3224584A5200527485 /* IControl.cpp in Sources */,
 				3D529C3024584A5200527485 /* IGraphics.cpp in Sources */,
-				3D529C3F24584A5200527485 /* IGraphicsCarbon.cpp in Sources */,
 				3D529C4224584A5200527485 /* IGraphicsCocoa.mm in Sources */,
 				3D529C4324584A5200527485 /* IGraphicsMac.mm in Sources */,
 				3D529C3924584A5200527485 /* IParam.cpp in Sources */,
@@ -948,7 +937,11 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/AU-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/Components";
-				REZ_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.audiounit.$(PROJECT_NAME:rfc1034identifier)";
+				REZ_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers",
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers",
+				);
 				WRAPPER_EXTENSION = component;
 			};
 			name = Debug;
@@ -964,7 +957,11 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/AU-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/Components";
-				REZ_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.audiounit.$(PROJECT_NAME:rfc1034identifier)";
+				REZ_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers",
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers",
+				);
 				WRAPPER_EXTENSION = component;
 			};
 			name = Release;
@@ -972,11 +969,16 @@
 		3DCA573224583673009F1E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = "$(HOME)";
+				ENABLE_TESTABILITY = YES;
 				GCC_FAST_MATH = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -984,26 +986,32 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_DEBUG,
 					"DEBUG=1",
+					IPLUG_NO_CARBON_SUPPORT,
+					SWELL_NO_METAL,
 					"$(inherited)",
 				);
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = .;
 				INFOPLIST_PREPROCESS = YES;
 				MACH_O_TYPE = mh_bundle;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_NAME = IPlugExample;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
 		3DCA573324583673009F1E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -1015,18 +1023,20 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IPlug/IPlug_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(ndebug)",
+					IPLUG_NO_CARBON_SUPPORT,
+					SWELL_NO_METAL,
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = .;
 				INFOPLIST_PREPROCESS = YES;
 				MACH_O_TYPE = mh_bundle;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_NAME = IPlugExample;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
@@ -1039,6 +1049,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/VST2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/VST";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.vst.$(PROJECT_NAME:rfc1034identifier)";
 				WRAPPER_EXTENSION = vst;
 			};
 			name = Debug;
@@ -1052,6 +1063,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/VST2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/VST";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.vst.$(PROJECT_NAME:rfc1034identifier)";
 				WRAPPER_EXTENSION = vst;
 			};
 			name = Release;
