@@ -53,9 +53,9 @@
 #define PLUG_UNIQUE_ID 'Iplg'
 #define PLUG_MFR_ID    'Tale'
 
-// To-do: Register unique VST2 ID via:
-// http://service.steinberg.de/databases/plugin.nsf/plugIn?openForm
-//
+// Note: VST2 IDs can no longer be registered, so choose wisely to avoid
+// possible clashes with other VST2 plugins.
+
 // To-do: Edit AU/VST-Info.plist to set CFBundleSignature to PLUG_UNIQUE_ID.
 
 // Plugin I/O config.
