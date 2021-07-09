@@ -20,28 +20,20 @@ right out of the box.
 C/C++ COMPILER
 
 For Windows we use the Microsoft Visual Studio 2019 C/C++ compiler, although
-any somewhat recent Microsoft C/C++ toolset should work.
-
-You can download the free Visual Studio 2019 Community edition via:
+any somewhat recent Microsoft C/C++ toolset should work. You can download
+the free Visual Studio 2019 Community edition via:
 
 	https://visualstudio.microsoft.com/downloads/
 
-For macOS you will need the Xcode 9 IDE with legacy support. If you plan to
-release your work, then you will also need Xcode 10 (or newer), side-by-side
-with Xcode 9, for notarizing your plugins.
-
-Before downloading Xcode first sign in to Apple Developer via:
+For macOS you will need the Xcode 12.5 IDE. Before downloading Xcode first
+sign in to Apple Developer via:
 
 	https://developer.apple.com/account/
 
-Then you can download Xcode 9 (and optionally Xcode 10) from:
+Then you can download Xcode 12.5 (and optionally the Additional Tools for
+Xcode 12.5) via:
 
-	https://download.developer.apple.com/Developer_Tools/Xcode_9.4.1/Xcode_9.4.1.xip
-	https://download.developer.apple.com/Developer_Tools/Xcode_10.3/Xcode_10.3.xip
-
-You will find more information on how to add legacy support to Xcode 9 here:
-
-	https://github.com/devernay/xcodelegacy
+	https://developer.apple.com/download/all/
 
 IPLUG FRAMEWORK
 
@@ -125,7 +117,7 @@ To run the plugin copy IPlugExample.dll from IPlugExample/x64/Release/ to
 your VST 2.4 plugin path. Then launch your hosting software of choice (e.g.
 REAPER or VSTHost), and load the IPlug Example plugin.
 
-On macOS open the IPlugExample.xcodeproj project in Xcode 9, and build the
+On macOS open the IPlugExample.xcodeproj project in Xcode 12.5, and build
 the VST 2.4 and/or AU bundle from within the IDE. If you build for running,
 then this will automatically copy the plugin to the user audio plugins
 folder.
