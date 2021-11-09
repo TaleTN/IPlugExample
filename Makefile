@@ -107,7 +107,7 @@ IPLUG = \
 
 iplug : "$(OUTDIR)" $(IPLUG)
 
-{IPlug}.cpp{$(OUTDIR)}.obj :
+{IPlug}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) $<
 
 LIBPNG = \
@@ -124,8 +124,8 @@ LIBPNG = \
 
 libpng : "$(OUTDIR)" $(LIBPNG)
 
-{WDL/libpng}.c{$(OUTDIR)}.obj :
-	$(CC) $(CFLAGS) "$<"
+{WDL/libpng}.c{$(OUTDIR)}.obj ::
+	$(CC) $(CFLAGS) $<
 
 LICE = \
 "$(OUTDIR)/lice.obj" \
@@ -136,7 +136,7 @@ LICE = \
 
 lice : "$(OUTDIR)" $(LICE)
 
-{WDL/lice}.cpp{$(OUTDIR)}.obj :
+{WDL/lice}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) $<
 
 ZLIB = \
@@ -151,8 +151,8 @@ ZLIB = \
 
 zlib : "$(OUTDIR)" $(ZLIB)
 
-{WDL/zlib}.c{$(OUTDIR)}.obj :
-	$(CC) $(CFLAGS) /D NO_GZCOMPRESS /D Z_SOLO "$<"
+{WDL/zlib}.c{$(OUTDIR)}.obj ::
+	$(CC) $(CFLAGS) /D NO_GZCOMPRESS /D Z_SOLO $<
 
 LIBS = \
 advapi32.lib \
