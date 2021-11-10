@@ -13,5 +13,9 @@ then
 fi
 
 for target in AU VST2; do
-	xcodebuild -configuration Release ndebug=NDEBUG -target $target clean install || exit
+	xcodebuild -configuration Release -target $target clean || exit
+done
+
+for target in AU VST2; do
+	xcodebuild -configuration Release ndebug=NDEBUG GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS=NO -target $target install || exit
 done
