@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bundle=IPlugExample
+
 if [ $# -eq 1 ] && [ "$1" == "--clean" ]
 then
 	rm -rf build
@@ -12,9 +14,10 @@ then
 	exit 1
 fi
 
-for target in AU VST2; do
-	xcodebuild -configuration Release -target $target clean || exit
-done
+rm -rf ~/"Library/Audio/Plug-Ins/Components/$bundle.component/" || exit
+rm -rf ~/"Library/Audio/Plug-Ins/VST/$bundle.vst/" || exit
+
+xcodebuild clean || exit
 
 for target in AU VST2; do
 	xcodebuild -configuration Release ndebug=NDEBUG GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS=NO -target $target install || exit
