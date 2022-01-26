@@ -17,16 +17,17 @@
 	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
 
 	// No spaces.
+	#define PLUG_FACTORY         PlugExample_Factory
 	#define PLUG_ENTRY           PlugExample_Entry
 	#define PLUG_ENTRY_STR      "PlugExample_Entry"
 	#define VIEW_CLASS           PlugExample_View
 	#define VIEW_CLASS_STR      "PlugExample_View"
 
 	// To-do: Create export file with two entries: PLUG_ENTRY and
-	// PLUG_VIEW_ENTRY, each with leading underscore (e.g. IPlugExample.exp
-	// with entries _PlugExample_Entry and _PlugExample_ViewEntry).
+	// PLUG_FACTORY, each with leading underscore (e.g. PlugExample.exp
+	// with entries _PlugExample_Entry and _PlugExample_Factory).
 
-	// To-do: Edit AU-Info.plist to set NSPrincipalClass to VIEW_CLASS.
+	// To-do: Set NSPrincipalClass in AU-Info.plist to VIEW_CLASS.
 #endif
 
 // Interpreted as 0xMajrMnBg.
@@ -45,6 +46,8 @@
 #elif defined(__APPLE__)
 	// To-do: Edit AU/VST-Info.plist to set CFBundleShortVersionString and
 	// NSHumanReadableCopyright to VERSIONINFO_STR to VERSIONINFO_COPYRIGHT.
+
+	// To-do: Set AudioComponents version in AU-Info.plist to PLUG_VER.
 #endif
 
 // 4 chars, single quotes.
@@ -54,7 +57,10 @@
 // Note: VST2 IDs can no longer be registered, so choose wisely to avoid
 // possible clashes with other VST2 plugins.
 
-// To-do: Edit AU/VST-Info.plist to set CFBundleSignature to PLUG_UNIQUE_ID.
+// To-do: Set CFBundleSignature in AU/VST2-Info.plist to PLUG_UNIQUE_ID.
+
+// To-do: Set AudioComponents manufacturer and subtype in AU-Info.plist to
+// PLUG_MFR_ID and PLUG_UNIQUE_ID.
 
 // Plugin I/O config.
 #define PLUG_CHANNEL_IO "1-1 2-2"
@@ -66,6 +72,9 @@
 #define PLUG_IS_INST       0
 #define PLUG_DOES_MIDI_IN  0
 #define PLUG_DOES_MIDI_OUT 0
+
+// To-do: Set AudioComponents type in AU-Info.plist to aufx (audio effect),
+// aumu (instrument), or aumf (audio effect with MIDI input).
 
 // Unique IDs for each image resource, bit 0 is scale (0 = full, 1 = half).
 
