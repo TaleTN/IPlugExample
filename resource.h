@@ -19,8 +19,6 @@
 	// No spaces.
 	#define PLUG_ENTRY           PlugExample_Entry
 	#define PLUG_ENTRY_STR      "PlugExample_Entry"
-	#define PLUG_VIEW_ENTRY      PlugExample_ViewEntry
-	#define PLUG_VIEW_ENTRY_STR "PlugExample_ViewEntry"
 	#define VIEW_CLASS           PlugExample_View
 	#define VIEW_CLASS_STR      "PlugExample_View"
 
