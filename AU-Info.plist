@@ -36,11 +36,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.8.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>Iplg</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2020, 2021 Theo Niessink</string>
+	<string>$(INFOPLIST_KEY_NSHumanReadableCopyright)</string>
 	<key>NSPrincipalClass</key>
 	<string>PlugExample_View</string>
 </dict>

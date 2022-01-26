@@ -44,8 +44,9 @@
 
 // Apple version info (non-optional).
 #elif defined(__APPLE__)
-	// To-do: Edit AU/VST-Info.plist to set CFBundleShortVersionString and
-	// NSHumanReadableCopyright to VERSIONINFO_STR to VERSIONINFO_COPYRIGHT.
+	// To-do: Set INFOPLIST_KEY_NSHumanReadableCopyright and
+	// MARKETING_VERSION in Xcode project to VERSIONINFO_COPYRIGHT and
+	// VERSIONINFO_STR.
 
 	// To-do: Set AudioComponents version in AU-Info.plist to PLUG_VER.
 #endif

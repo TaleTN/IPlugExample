@@ -993,9 +993,11 @@
 				);
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = .;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2020-2022 Theo Niessink";
 				INFOPLIST_PREPROCESS = YES;
 				MACH_O_TYPE = mh_bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_NAME = IPlugExample;
@@ -1032,9 +1034,11 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = .;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2020-2022 Theo Niessink";
 				INFOPLIST_PREPROCESS = YES;
 				MACH_O_TYPE = mh_bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_NAME = IPlugExample;
 				SDKROOT = macosx;
