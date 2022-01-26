@@ -1,7 +1,7 @@
 IPLUG EXAMPLE
 
 A simple tremolo audio effect plugin (AU/VST2), serving as an example for
-the IPlug "Tale" edition plugin framework.
+the IPlug "Tale" Edition plugin framework.
 
 GETTING STARTED
 
@@ -25,13 +25,13 @@ the free Visual Studio 2019 Community edition via:
 
 	https://visualstudio.microsoft.com/downloads/
 
-For macOS you will need the Xcode 12.5 IDE. Before downloading Xcode first
+For macOS you will need the Xcode 13 IDE. Before downloading Xcode first
 sign in to Apple Developer via:
 
 	https://developer.apple.com/account/
 
-Then you can download Xcode 12.5 (and optionally the Additional Tools for
-Xcode 12.5) via:
+Then you can download Xcode 13 (and optionally the Additional Tools for
+Xcode 13) via:
 
 	https://developer.apple.com/download/all/
 
@@ -40,10 +40,10 @@ IPLUG FRAMEWORK
 IPlug is a cross-platform VST/AU plugin framework for Windows and macOS, on
 which you can build audio plug-in effects and instruments. It was originally
 part of the Cockos WDL library, but it has since evolved into different forks
-like IPlug "Tale" edition and WDL-OL (now iPlug2). Note that this example
-will work only with IPlug "Tale" edition.
+like IPlug "Tale" Edition and WDL-OL (now iPlug2). Note that this example
+will work only with IPlug "Tale" Edition.
 
-You can download IPlug "Tale" edition from:
+You can download IPlug "Tale" Edition from:
 
 	https://github.com/TaleTN/IPlug.git
 
@@ -63,11 +63,11 @@ For your own projects this is the recommended method.
 WDL LIBRARY
 
 WDL (whittle) is a C++ library, created and maintained by Cockos, and used
-for REAPER. Although IPlug "Tale" edition will work fine with Cockos WDL,
-using WDL "Tale" edition instead is recommended, because that is what we
+for REAPER. Although IPlug "Tale" Edition will work fine with Cockos WDL,
+using WDL "Tale" Edition instead is recommended, because that is what we
 use. ;-)
 
-You can download WDL "Tale" edition from:
+You can download WDL "Tale" Edition from:
 
 	https://github.com/TaleTN/WDL.git
 
