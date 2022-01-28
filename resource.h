@@ -5,6 +5,9 @@
 // No quotes or spaces.
 #define PLUG_CLASS_NAME PlugExample
 
+// To-do: Set AudioComponents description and name in AU-Info.plist to
+// PLUG_NAME " AU" and PLUG_MFR ": " PLUG_NAME.
+
 #ifdef __APPLE__
 	// Double quotes, no spaces. BUNDLE_DOMAIN must contain only
 	// alphanumeric (A-Z, a-z, 0-9), hyphen (-), and period (.) chars.
