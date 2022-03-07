@@ -79,7 +79,7 @@ Extract it so you have:
 
 Alternatively you can add WDL as a remote:
 
-	1. git remote add wdl https://github.com/TaleTN/IPlug.git
+	1. git remote add wdl https://github.com/TaleTN/WDL.git
 	2. git fetch wdl
 	3. git merge --allow-unrelated-histories wdl/main
 
