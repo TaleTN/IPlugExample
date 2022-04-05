@@ -2,6 +2,8 @@
 #include "IPlug/IPlug_include_in_plug_src.h"
 
 #include <math.h>
+
+#include "WDL/db2val.h"
 #include "WDL/denormal.h"
 
 static const int kNumPresets = 16;
@@ -144,7 +146,8 @@ void PlugExample::OnParamChange(const int paramIdx)
 
 		case kParamDepth:
 		{
-			mAmpDepth = GetParam<IDoubleParam>(kParamDepth)->DBToAmp();
+			const double depth = GetParam<IDoubleParam>(kParamDepth)->Value();
+			mAmpDepth = DB2VAL(-depth);
 			break;
 		}
 
