@@ -120,7 +120,7 @@ LIBPNG = \
 "$(OUTDIR)/pngrtran.obj" \
 "$(OUTDIR)/pngrutil.obj" \
 "$(OUTDIR)/pngset.obj" \
-"$(OUTDIR)/pngtrans.obj" \
+"$(OUTDIR)/pngtrans.obj"
 
 libpng : "$(OUTDIR)" $(LIBPNG)
 
