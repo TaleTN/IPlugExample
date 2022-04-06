@@ -99,6 +99,7 @@
       <ForceConformanceInForLoopScope />
       <RemoveUnreferencedCodeData />
       <TreatWChar_tAsBuiltInType />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -132,6 +133,7 @@
       <ForceConformanceInForLoopScope />
       <RemoveUnreferencedCodeData />
       <TreatWChar_tAsBuiltInType />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -165,6 +167,7 @@
       <ForceConformanceInForLoopScope />
       <RemoveUnreferencedCodeData />
       <TreatWChar_tAsBuiltInType />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -198,6 +201,7 @@
       <ForceConformanceInForLoopScope />
       <RemoveUnreferencedCodeData />
       <TreatWChar_tAsBuiltInType />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
