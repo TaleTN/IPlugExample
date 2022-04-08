@@ -546,14 +546,14 @@
 			name = dfx;
 			sourceTree = "<group>";
 		};
-		3DC066E924599DCC00516437 /* VST2 */ = {
+		3DC066E924599DCC00516437 /* VST2_SDK */ = {
 			isa = PBXGroup;
 			children = (
 				3DC066EA24599DFA00516437 /* aeffect.h */,
 				3DC066EB24599DFA00516437 /* aeffectx.h */,
 				3DC066EC24599DFA00516437 /* vstfxstore.h */,
 			);
-			name = VST2;
+			name = VST2_SDK;
 			sourceTree = "<group>";
 		};
 		3DCA572724583673009F1E70 = {
@@ -567,7 +567,7 @@
 				3D529C112458448E00527485 /* VST2-Info.plist */,
 				3D529C17245849E000527485 /* IPlug */,
 				3D529CA72458517C00527485 /* WDL */,
-				3DC066E924599DCC00516437 /* VST2 */,
+				3DC066E924599DCC00516437 /* VST2_SDK */,
 				3D529C08245842B000527485 /* Resources */,
 				3D529C12245847D400527485 /* Frameworks */,
 				3DCA573124583673009F1E70 /* Products */,
