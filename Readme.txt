@@ -19,7 +19,7 @@ right out of the box.
 
 C/C++ COMPILER
 
-For Windows we use the Microsoft Visual Studio 2019 C/C++ compiler, although
+For Windows we use the Microsoft Visual Studio 2022 C/C++ compiler, although
 any somewhat recent Microsoft C/C++ toolset should work. You can download
 the free Visual Studio Community edition via:
 
@@ -106,7 +106,7 @@ Steinberg.
 
 HOW TO BUILD & RUN
 
-On Windows open the IPlugExample.sln solution in Visual Studio 2019, and
+On Windows open the IPlugExample.sln solution in Visual Studio 2022, and
 build the VST 2.4 plugin DLL from within the IDE. Alternatively you can
 build the DLL from the command prompt by typing:
 
