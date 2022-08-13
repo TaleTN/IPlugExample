@@ -107,6 +107,30 @@ IPLUG = \
 
 iplug : "$(OUTDIR)" $(IPLUG)
 
+#"$(OUTDIR)/Hosts.obj" : IPlug/Hosts.cpp IPlug/Hosts.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_Hosts.asm" IPlug/Hosts.cpp
+#
+#"$(OUTDIR)/IControl.obj" : IPlug/IControl.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IControl.asm" IPlug/IControl.cpp
+#
+#"$(OUTDIR)/IGraphics.obj" : IPlug/IGraphics.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IGraphics.asm" IPlug/IGraphics.cpp
+#
+#"$(OUTDIR)/IGraphicsWin.obj" : IPlug/IGraphicsWin.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IGraphicsWin.asm" IPlug/IGraphicsWin.cpp
+#
+#"$(OUTDIR)/IParam.obj" : IPlug/IParam.cpp IPlug/Containers.h IPlug/IParam.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IParam.asm" IPlug/IParam.cpp
+#
+#"$(OUTDIR)/IPlugBase.obj" : IPlug/IPlugBase.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugBase.asm" IPlug/IPlugBase.cpp
+#
+#"$(OUTDIR)/IPlugStructs.obj" : IPlug/IPlugStructs.cpp IPlug/Containers.h IPlug/IPlugStructs.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugStructs.asm" IPlug/IPlugStructs.cpp
+#
+#"$(OUTDIR)/IPlugVST2.obj" : IPlug/IPlugVST2.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
+#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugVST2.asm" IPlug/IPlugVST2.cpp
+
 {IPlug}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) $<
 
