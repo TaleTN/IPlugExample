@@ -20,11 +20,11 @@
 	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
 
 	// No spaces.
-	#define PLUG_FACTORY         PlugExample_Factory
-	#define PLUG_ENTRY           PlugExample_Entry
-	#define PLUG_ENTRY_STR      "PlugExample_Entry"
-	#define VIEW_CLASS           PlugExample_View
-	#define VIEW_CLASS_STR      "PlugExample_View"
+	#define PLUG_FACTORY    PlugExample_Factory
+	#define PLUG_ENTRY      PlugExample_Entry
+	#define PLUG_ENTRY_STR "PlugExample_Entry"
+	#define VIEW_CLASS      PlugExample_View
+	#define VIEW_CLASS_STR "PlugExample_View"
 
 	// To-do: Create export file with two entries: PLUG_ENTRY and
 	// PLUG_FACTORY, each with leading underscore (e.g. PlugExample.exp
