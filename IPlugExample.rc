@@ -52,7 +52,7 @@ BEGIN
 			VALUE "InternalName",     PLUG_NAME
 			#endif
 			#ifdef VERSIONINFO_COPYRIGHT
-			VALUE "LegalCopyright",   VERSIONINFO_COPYRIGHT
+			VALUE "LegalCopyright",   "© " VERSIONINFO_COPYRIGHT
 			#endif
 			VALUE "OriginalFilename", VERSIONINFO_ORG_FILE
 			VALUE "ProductName",      PLUG_NAME

@@ -34,16 +34,17 @@
 #endif
 
 // Interpreted as 0xMajrMnBg.
-#define PLUG_VER  0x00000800
+#define PLUG_VER  0x00000800 // 0.8.0
+#define VERSIONINFO_VERSION     0,8,0,0
+#define VERSIONINFO_STR        "0.8.0"
+
+#define VERSIONINFO_PRERELEASE // Define if alpha, beta, or RC
+#define VERSIONINFO_COPYRIGHT "2020-2022 Theo Niessink"
 
 // Windows version info resource (optional).
 #ifdef _WIN32
-	#define VERSIONINFO_VERSION     0,8,0,0
-	#define VERSIONINFO_STR        "0.8.0"
-	#define VERSIONINFO_PRERELEASE // Define if alpha, beta, or RC
 	// #define VERSIONINFO_CODE_NAME  "Project X"
-	#define VERSIONINFO_COPYRIGHT "© 2020, 2021 Theo Niessink"
-	#define VERSIONINFO_ORG_FILE   "IPlugExample.dll"
+	#define VERSIONINFO_ORG_FILE "IPlugExample.dll"
 
 // Apple version info (non-optional).
 #elif defined(__APPLE__)
