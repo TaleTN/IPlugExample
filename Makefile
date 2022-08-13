@@ -76,8 +76,8 @@ vst2 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE)"
 !	ENDIF
 !ENDIF
 
-"$(OUTDIR)/$(PROJECT).obj" : $(PROJECT).cpp $(PROJECT).h resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
-	$(CPP) $(CPPFLAGS) /D VST2_API /Fa"$(OUTDIR)/_$(PROJECT).asm" $(PROJECT).cpp
+"$(OUTDIR)/$(PROJECT).obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
+	$(CPP) $(CPPFLAGS) /D VST2_API /Fa"$(OUTDIR)/_$(PROJECT).asm" "$(PROJECT).cpp"
 
 RESOURCES = \
 img/bg.png \
@@ -165,7 +165,8 @@ user32.lib \
 wininet.lib
 
 "$(OUTDIR)/$(OUTFILE)" : "$(OUTDIR)/$(PROJECT).obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) $(LIBPNG) $(LICE) $(ZLIB)
-	link $(LINKFLAGS) /out:$@ $** $(LIBS)
+	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT).obj" ...
+	@link $(LINKFLAGS) /out:$@ $** $(LIBS)
 
 clean :
 !IF EXIST("$(OUTDIR)/")
