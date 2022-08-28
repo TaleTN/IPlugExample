@@ -1,9 +1,9 @@
 # Usage: nmake [config=Release|Debug] [ndebug=1] ...
 
 PROJECT = IPlugExample
-OUTFILE = $(PROJECT).dll
+OUTFILE = $(PROJECT)
 
-CFLAGS = /fp:fast /D _USE_MATH_DEFINES /I . /c /Fo"$(OUTDIR)/" /Fd"$(OUTDIR)/" /Zi /W3 /WX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_WARNINGS /MP /nologo
+CFLAGS = /fp:fast /D _USE_MATH_DEFINES /I . /c /Fd"$(OUTDIR)/" /Zi /W3 /WX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_WARNINGS /MP /nologo
 CFLAGS = $(CFLAGS) /D WDL_DENORMAL_WANTS_SCOPED_FTZ
 
 CPPFLAGS = /EHsc $(CFLAGS)
@@ -66,18 +66,8 @@ all : vst2
 	mkdir $@
 !ENDIF
 
-vst2 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE)"
-!IFDEF REMINDER
-	@echo.
-!	IF "$(PLATFORM)" == "x64"
-	@echo $(REMINDER:x64_or_x86=x86)
-!	ELSE
-	@echo $(REMINDER:x64_or_x86=x64)
-!	ENDIF
-!ENDIF
-
-"$(OUTDIR)/$(PROJECT).obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
-	$(CPP) $(CPPFLAGS) /D VST2_API /Fa"$(OUTDIR)/_$(PROJECT).asm" "$(PROJECT).cpp"
+"$(OUTDIR)/$(PROJECT)VST2.obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
+	$(CPP) $(CPPFLAGS) /D VST2_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)VST2.asm" "$(PROJECT).cpp"
 
 RESOURCES = \
 img/bg.png \
@@ -93,7 +83,7 @@ img/shape.png \
 img/shape@2x.png
 
 "$(OUTDIR)/$(PROJECT).res" : "$(PROJECT).rc" resource.h $(RESOURCES)
-	$(RC) $(RCFLAGS) /D VST2_API /fo$@ "$(PROJECT).rc"
+	$(RC) $(RCFLAGS) /fo$@ "$(PROJECT).rc"
 
 IPLUG = \
 "$(OUTDIR)/Hosts.obj" \
@@ -102,37 +92,36 @@ IPLUG = \
 "$(OUTDIR)/IGraphicsWin.obj" \
 "$(OUTDIR)/IParam.obj" \
 "$(OUTDIR)/IPlugBase.obj" \
-"$(OUTDIR)/IPlugStructs.obj" \
-"$(OUTDIR)/IPlugVST2.obj"
+"$(OUTDIR)/IPlugStructs.obj"
 
-iplug : "$(OUTDIR)" $(IPLUG)
+iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj"
 
 #"$(OUTDIR)/Hosts.obj" : IPlug/Hosts.cpp IPlug/Hosts.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_Hosts.asm" IPlug/Hosts.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_Hosts.asm" IPlug/Hosts.cpp
 #
 #"$(OUTDIR)/IControl.obj" : IPlug/IControl.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IControl.asm" IPlug/IControl.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IControl.asm" IPlug/IControl.cpp
 #
 #"$(OUTDIR)/IGraphics.obj" : IPlug/IGraphics.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IGraphics.asm" IPlug/IGraphics.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IGraphics.asm" IPlug/IGraphics.cpp
 #
 #"$(OUTDIR)/IGraphicsWin.obj" : IPlug/IGraphicsWin.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IGraphicsWin.asm" IPlug/IGraphicsWin.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IGraphicsWin.asm" IPlug/IGraphicsWin.cpp
 #
 #"$(OUTDIR)/IParam.obj" : IPlug/IParam.cpp IPlug/Containers.h IPlug/IParam.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IParam.asm" IPlug/IParam.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IParam.asm" IPlug/IParam.cpp
 #
 #"$(OUTDIR)/IPlugBase.obj" : IPlug/IPlugBase.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugBase.asm" IPlug/IPlugBase.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugBase.asm" IPlug/IPlugBase.cpp
 #
 #"$(OUTDIR)/IPlugStructs.obj" : IPlug/IPlugStructs.cpp IPlug/Containers.h IPlug/IPlugStructs.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugStructs.asm" IPlug/IPlugStructs.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugStructs.asm" IPlug/IPlugStructs.cpp
 #
 #"$(OUTDIR)/IPlugVST2.obj" : IPlug/IPlugVST2.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
-#	$(CPP) $(CPPFLAGS) /Fa"$(OUTDIR)/_IPlugVST2.asm" IPlug/IPlugVST2.cpp
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugVST2.asm" IPlug/IPlugVST2.cpp
 
 {IPlug}.cpp{$(OUTDIR)}.obj ::
-	$(CPP) $(CPPFLAGS) $<
+	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" $<
 
 LIBPNG = \
 "$(OUTDIR)/png.obj" \
@@ -149,7 +138,7 @@ LIBPNG = \
 libpng : "$(OUTDIR)" $(LIBPNG)
 
 {WDL/libpng}.c{$(OUTDIR)}.obj ::
-	$(CC) $(CFLAGS) $<
+	$(CC) $(CFLAGS) /Fo"$(OUTDIR)/" $<
 
 LICE = \
 "$(OUTDIR)/lice.obj" \
@@ -161,7 +150,7 @@ LICE = \
 lice : "$(OUTDIR)" $(LICE)
 
 {WDL/lice}.cpp{$(OUTDIR)}.obj ::
-	$(CPP) $(CPPFLAGS) $<
+	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" $<
 
 ZLIB = \
 "$(OUTDIR)/adler32.obj" \
@@ -176,7 +165,7 @@ ZLIB = \
 zlib : "$(OUTDIR)" $(ZLIB)
 
 {WDL/zlib}.c{$(OUTDIR)}.obj ::
-	$(CC) $(CFLAGS) /D NO_GZCOMPRESS /D Z_SOLO $<
+	$(CC) $(CFLAGS) /D NO_GZCOMPRESS /D Z_SOLO /Fo"$(OUTDIR)/" $<
 
 LIBS = \
 advapi32.lib \
@@ -188,9 +177,21 @@ shell32.lib \
 user32.lib \
 wininet.lib
 
-"$(OUTDIR)/$(OUTFILE)" : "$(OUTDIR)/$(PROJECT).obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) $(LIBPNG) $(LICE) $(ZLIB)
-	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT).obj" ...
-	@link $(LINKFLAGS) /out:$@ $** $(LIBS)
+"$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)VST2.obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj" $(LIBPNG) $(LICE) $(ZLIB)
+	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)VST2.obj" ...
+	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)VST2.lib" $** $(LIBS)
+
+vst2 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).dll"
+
+dist : vst2
+!IFDEF REMINDER
+	@echo.
+!	IF "$(PLATFORM)" == "x64"
+	@echo $(REMINDER:x64_or_x86=x86)
+!	ELSE
+	@echo $(REMINDER:x64_or_x86=x64)
+!	ENDIF
+!ENDIF
 
 clean :
 !IF EXIST("$(OUTDIR)/")
