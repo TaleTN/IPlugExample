@@ -59,12 +59,15 @@ OUTDIR = $(PLATFORM)/$(CONFIGURATION)
 !MESSAGE $(PROJECT) - $(CONFIGURATION)|$(PLATFORM)
 !MESSAGE
 
-all : vst2
+all : clap
 
 "$(OUTDIR)" :
 !IF !EXIST("$(OUTDIR)/")
 	mkdir $@
 !ENDIF
+
+"$(OUTDIR)/$(PROJECT)CLAP.obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugCLAP.h
+	$(CPP) $(CPPFLAGS) /D CLAP_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)CLAP.asm" "$(PROJECT).cpp"
 
 "$(OUTDIR)/$(PROJECT)VST2.obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
 	$(CPP) $(CPPFLAGS) /D VST2_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)VST2.asm" "$(PROJECT).cpp"
@@ -94,7 +97,7 @@ IPLUG = \
 "$(OUTDIR)/IPlugBase.obj" \
 "$(OUTDIR)/IPlugStructs.obj"
 
-iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj"
+iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.obj"
 
 #"$(OUTDIR)/Hosts.obj" : IPlug/Hosts.cpp IPlug/Hosts.h
 #	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_Hosts.asm" IPlug/Hosts.cpp
@@ -116,6 +119,9 @@ iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj"
 #
 #"$(OUTDIR)/IPlugStructs.obj" : IPlug/IPlugStructs.cpp IPlug/Containers.h IPlug/IPlugStructs.h
 #	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugStructs.asm" IPlug/IPlugStructs.cpp
+#
+#"$(OUTDIR)/IPlugCLAP.obj" : IPlug/IPlugCLAP.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugCLAP.h
+#	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugCLAP.asm" IPlug/IPlugCLAP.cpp
 #
 #"$(OUTDIR)/IPlugVST2.obj" : IPlug/IPlugVST2.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
 #	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugVST2.asm" IPlug/IPlugVST2.cpp
@@ -177,13 +183,19 @@ shell32.lib \
 user32.lib \
 wininet.lib
 
+"$(OUTDIR)/$(OUTFILE).clap" : "$(OUTDIR)/$(PROJECT)CLAP.obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" $(LIBPNG) $(LICE) $(ZLIB)
+	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)CLAP.obj" ...
+	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)CLAP.lib" $** $(LIBS)
+
 "$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)VST2.obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj" $(LIBPNG) $(LICE) $(ZLIB)
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)VST2.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)VST2.lib" $** $(LIBS)
 
+clap : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).clap"
+
 vst2 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).dll"
 
-dist : vst2
+dist : clap vst2
 !IFDEF REMINDER
 	@echo.
 !	IF "$(PLATFORM)" == "x64"
