@@ -38,8 +38,9 @@ PlugExample::PlugExample(void* const instanceInfo)
 	// Instantiate GUI.
 	IGraphics* const pGraphics = MakeGraphics(this, 1200, 600);
 
-	pGraphics->HandleMouseWheel(IGraphics::kMouseWheelModKey);
+	pGraphics->SetDefaultScale(IGraphics::kScaleHalf);
 	pGraphics->EnableTooltips(true);
+	pGraphics->HandleMouseWheel(IGraphics::kMouseWheelModKey);
 
 	const IBitmap bg(BG_PNG_ID, pGraphics->Width(), pGraphics->Height());
 	pGraphics->AttachBackground(new IBackgroundControl(this, &bg));
