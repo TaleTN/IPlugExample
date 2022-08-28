@@ -1,7 +1,7 @@
 IPLUG EXAMPLE
 
-A simple tremolo audio effect plugin (AU/VST2), serving as an example for
-the IPlug "Tale" Edition plugin framework.
+A simple tremolo audio effect plugin (CLAP/VST2/AU) for Windows and macOS,
+serving as an example for the IPlug "Tale" Edition plugin framework.
 
 GETTING STARTED
 
@@ -11,7 +11,8 @@ and additional projects:
 	1. C/C++ compiler.
 	2. IPlug framework.
 	3. WDL library.
-	4. VST 2.4 SDK.
+	4. CLAP headers.
+	5. VST 2.4 SDK.
 
 Note that this readme describes the toolset we actually use at Martinic. You
 could probably use a different toolset, but then things will likely not work
@@ -25,23 +26,35 @@ the free Visual Studio Community edition via:
 
 	https://visualstudio.microsoft.com/downloads/
 
-For macOS you will need the Xcode 13 IDE. Before downloading Xcode first
-sign in to Apple Developer via:
+For macOS you will need the Xcode 13 or newer IDE. Before downloading Xcode
+first sign in to Apple Developer via:
 
 	https://developer.apple.com/account/
 
-Then you can download Xcode 13 (and optionally the Additional Tools for
-Xcode 13) via:
+Then you can download Xcode (and optionally the Additional Tools for Xcode)
+via:
 
 	https://developer.apple.com/download/all/
 
+EXAMPLE PROJECT
+
+You can download the IPlug example project (i.e. this project) from:
+
+	https://github.com/TaleTN/IPlugExample.git
+
+If you use Git, then alternatively you can clone the example project:
+
+	1. mkdir IPlugExample
+	2. cd IPlugExample
+	3. git clone https://github.com/TaleTN/IPlugExample.git .
+
 IPLUG FRAMEWORK
 
-IPlug is a cross-platform VST/AU plugin framework for Windows and macOS, on
-which you can build audio plug-in effects and instruments. It was originally
-part of the Cockos WDL library, but it has since evolved into different forks
-like IPlug "Tale" Edition and WDL-OL (now iPlug2). Note that this example
-will work only with IPlug "Tale" Edition.
+IPlug is a cross-platform CLAP/VST2/AU plugin framework for Windows and
+macOS, on which you can build audio plug-in effects and instruments. It was
+originally part of the Cockos WDL library, but it has since evolved into
+different forks like IPlug "Tale" Edition and iPlug2 (formerly WDL-OL). Note
+that this example will work only with IPlug "Tale" Edition.
 
 You can download IPlug "Tale" Edition from:
 
@@ -85,10 +98,26 @@ Alternatively you can add WDL as a remote:
 
 For your own projects this is the recommended method.
 
+CLAP HEADERS
+
+For CLAP support you will need the CLAP ABI headers. You can download CLAP
+from:
+
+	https://github.com/free-audio/clap
+
+You will only need the header files in include/clap. Extract them so you
+have:
+
+	IPlugExample/IPlugExample.cpp, ...
+	IPlugExample/IPlug/Containers.h, ...
+	IPlugExample/WDL/assocarray.h, ...
+	IPlugExample/clap/audio-buffer.h, ...             <-- clap goes here
+
 VST 2.4 SDK
 
-You will need only two header files from the VST 2.4 SDK: aeffect.h and
-aeffectx.h. Extract them and place them in VST2_SDK so you have:
+For VST 2.4 support you will need only two header files from the VST 2.4
+SDK: aeffect.h and aeffectx.h. Extract them and place them in VST2_SDK so
+you have:
 
 	IPlugExample/IPlugExample.cpp, ...
 	IPlugExample/IPlug/Containers.h, ...
@@ -110,35 +139,39 @@ On Windows open the IPlugExample.sln solution in Visual Studio 2022, and
 build the VST 2.4 plugin DLL from within the IDE. Alternatively you can
 build the DLL from the command prompt by typing:
 
-	cd IPlugExample
-	nmake
+	1. cd IPlugExample
+	2. nmake clap
+	3. nmake vst2
 
 Note that building from the command prompt should work with any somewhat
 recent Microsoft C/C++ toolset.
 
-To run the plugin copy IPlugExample.dll from IPlugExample/x64/Release/ to
-your VST 2.4 plugin path. Then launch your hosting software of choice (e.g.
-REAPER or VSTHost), and load the IPlug Example plugin.
+To run the plugin copy IPlugExample.clap (CLAP) or IPlugExample.dll (VST2)
+from IPlugExample/x64/Release/ to your CLAP or VST 2.4 plugin path. Then
+launch your hosting software of choice (e.g. REAPER or VSTHost), and load
+the IPlug Example plugin.
 
-On macOS open the IPlugExample.xcodeproj project in Xcode 13, and build the
-VST 2.4 and/or AU bundle from within the IDE. If you build for running, then
-this will automatically copy the plugin to the user audio plugins folder.
+On macOS open the IPlugExample.xcodeproj project in Xcode, and build the
+AU, CLAP, and/or VST2 target from within the IDE. If you build for running,
+then this will automatically copy the plugin to the user audio plugins
+folder.
 
 To run the plugin launch your hosting software of choice (e.g. REAPER or
-GarageBand), and load the IPlug Example plugin. Note that macOS might not
-see new AU plugins unless you restart your computer, or run the following
-command from the terminal:
+GarageBand), and load the IPlug Example plugin. The first time you build the
+AU plugin macOS might not see it unless you restart your computer, or run
+the following command from the terminal:
 
 	killall -9 AudioComponentRegistrar
 
 Note that even if you build a release version of the plugin, by default it
 won't have NDEBUG defined. This is great for testing, because it means you
-can still use DebugLog() to log to DebugView (Windows) or Console (macOS).
+can still use IPlugBase::DebugLog() to log to DebugView (Windows) or Console
+(macOS).
 
-To build a production release you can run the makedist.cmd (Windows) and
+To build a production release you can run the makedist.cmd (Windows) or
 makedist.sh (macOS) scripts from the command prompt or terminal. A next step
-would be bundle production releases in a ZIP or installer, but that is
-beyond the scope of this example.
+would be to bundle production releases in a ZIP file or installer, but that
+is beyond the scope of this example.
 
 LICENSE
 
