@@ -8,16 +8,17 @@
 // To-do: Set AudioComponents description and name in AU-Info.plist to
 // PLUG_NAME " AU" and PLUG_MFR ": " PLUG_NAME.
 
-#ifdef __APPLE__
-	// Double quotes, no spaces. BUNDLE_DOMAIN must contain only
-	// alphanumeric (A-Z, a-z, 0-9), hyphen (-), and period (.) chars.
-	// BUNDLE_NAME must be less than 16 chars.
-	#define BUNDLE_DOMAIN "com.TaleTN"
-	#define BUNDLE_NAME   "IPlugExample"
+// Double quotes, no spaces. BUNDLE_DOMAIN must contain only alphanumeric
+// (A-Z, a-z, 0-9), hyphen (-), and period (.) chars. BUNDLE_NAME must be
+// less than 16 chars.
+#define BUNDLE_DOMAIN "com.TaleTN"
+#define BUNDLE_NAME   "IPlugExample"
 
+#ifdef __APPLE__
 	// To-do: Set Product Bundle Indentifier in Xcode project to
-	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME (AU target), and
-	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
+	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME (AU target),
+	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target), and
+	// BUNDLE_DOMAIN.clap.BUNDLE_NAME (CLAP target).
 
 	// No spaces.
 	#define PLUG_FACTORY    PlugExample_Factory
