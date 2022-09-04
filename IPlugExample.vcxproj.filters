@@ -3,13 +3,16 @@
   <ItemGroup>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="Header Files\IPlug">
       <UniqueIdentifier>{f5b596c1-70bc-4d5b-8ac4-36d64bd0e566}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\VST2_SDK">
-      <UniqueIdentifier>{ccc7f790-8373-4935-9ac6-d68a0ffa96cc}</UniqueIdentifier>
+    <Filter Include="Header Files\clap">
+      <UniqueIdentifier>{2af140e7-549d-49fd-814c-858ec484ba22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WDL">
+      <UniqueIdentifier>{a8257943-c8d4-4679-96f6-a1b9401c119f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\WDL\libpng">
       <UniqueIdentifier>{889b1b6c-f402-49ef-a8a9-07b0010f4f2a}</UniqueIdentifier>
@@ -20,22 +23,22 @@
     <Filter Include="Header Files\WDL\zlib">
       <UniqueIdentifier>{e46d0efe-98c4-4709-bc0c-4919360364c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\WDL">
-      <UniqueIdentifier>{a8257943-c8d4-4679-96f6-a1b9401c119f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Resource Files\img">
       <UniqueIdentifier>{dcd598ac-9d27-4d27-b7da-ffb492707a55}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Source Files\IPlug">
       <UniqueIdentifier>{7fc73954-331d-49c8-ab85-66124db74d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WDL">
+      <UniqueIdentifier>{7c77c0ac-0058-4e0e-83a7-50e6fcaf4fa4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\WDL\libpng">
       <UniqueIdentifier>{bbc00214-84cc-4c32-ba2c-5a1d7109b29a}</UniqueIdentifier>
@@ -45,9 +48,6 @@
     </Filter>
     <Filter Include="Source Files\WDL\zlib">
       <UniqueIdentifier>{37c3d7e0-3ddd-4c6d-95d9-e3bd6eb3de62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\WDL">
-      <UniqueIdentifier>{7c77c0ac-0058-4e0e-83a7-50e6fcaf4fa4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,17 +81,11 @@
     <ClInclude Include="IPlug\IPlugStructs.h">
       <Filter>Header Files\IPlug</Filter>
     </ClInclude>
-    <ClInclude Include="IPlug\IPlugVST2.h">
+    <ClInclude Include="IPlug\IPlugCLAP.h">
       <Filter>Header Files\IPlug</Filter>
     </ClInclude>
-    <ClInclude Include="VST2_SDK\aeffect.h">
-      <Filter>Header Files\VST2_SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="VST2_SDK\aeffectx.h">
-      <Filter>Header Files\VST2_SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="VST2_SDK\vstfxstore.h">
-      <Filter>Header Files\VST2_SDK</Filter>
+    <ClInclude Include="clap\clap.h">
+      <Filter>Header Files\clap</Filter>
     </ClInclude>
     <ClInclude Include="WDL\libpng\png.h">
       <Filter>Header Files\WDL\libpng</Filter>
@@ -264,7 +258,7 @@
     <ClCompile Include="IPlug\IPlugStructs.cpp">
       <Filter>Source Files\IPlug</Filter>
     </ClCompile>
-    <ClCompile Include="IPlug\IPlugVST2.cpp">
+    <ClCompile Include="IPlug\IPlugCLAP.cpp">
       <Filter>Source Files\IPlug</Filter>
     </ClCompile>
     <ClCompile Include="WDL\libpng\png.c">

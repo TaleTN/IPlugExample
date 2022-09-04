@@ -65,23 +65,27 @@
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
+    <TargetExt>.clap</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
     <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.clap</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <GenerateManifest>false</GenerateManifest>
+    <TargetExt>.clap</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <GenerateManifest>false</GenerateManifest>
     <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.clap</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -230,10 +234,8 @@
     <ClInclude Include="IPlug\IPlug_include_in_plug_src.h" />
     <ClInclude Include="IPlug\IPlugBase.h" />
     <ClInclude Include="IPlug\IPlugStructs.h" />
-    <ClInclude Include="IPlug\IPlugVST2.h" />
-    <ClInclude Include="VST2_SDK\aeffect.h" />
-    <ClInclude Include="VST2_SDK\aeffectx.h" />
-    <ClInclude Include="VST2_SDK\vstfxstore.h" />
+    <ClInclude Include="IPlug\IPlugCLAP.h" />
+    <ClInclude Include="clap\clap.h" />
     <ClInclude Include="WDL\libpng\png.h" />
     <ClInclude Include="WDL\libpng\pngconf.h" />
     <ClInclude Include="WDL\libpng\pngdebug.h" />
@@ -285,9 +287,7 @@
     <Image Include="img\shape%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="IPlugExample.rc">
-      <PreprocessorDefinitions>VST2_API</PreprocessorDefinitions>
-    </ResourceCompile>
+    <ResourceCompile Include="IPlugExample.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IPlug\Hosts.cpp" />
@@ -297,7 +297,7 @@
     <ClCompile Include="IPlug\IParam.cpp" />
     <ClCompile Include="IPlug\IPlugBase.cpp" />
     <ClCompile Include="IPlug\IPlugStructs.cpp" />
-    <ClCompile Include="IPlug\IPlugVST2.cpp" />
+    <ClCompile Include="IPlug\IPlugCLAP.cpp" />
     <ClCompile Include="WDL\libpng\png.c" />
     <ClCompile Include="WDL\libpng\pngerror.c" />
     <ClCompile Include="WDL\libpng\pngget.c" />
@@ -338,7 +338,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions);NO_GZCOMPRESS;Z_SOLO</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="IPlugExample.cpp">
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);VST2_API</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);CLAP_API</PreprocessorDefinitions>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
