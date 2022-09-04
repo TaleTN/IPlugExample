@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DCA572F24583673009F1E70"
-               BuildableName = "IPlugExample.vst"
-               BlueprintName = "VST2"
+               BlueprintIdentifier = "3D144C5328C4F93B003FA6F7"
+               BuildableName = "IPlugExample.clap"
+               BlueprintName = "CLAP"
                ReferencedContainer = "container:IPlugExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3DCA572F24583673009F1E70"
-            BuildableName = "IPlugExample.vst"
-            BlueprintName = "VST2"
+            BlueprintIdentifier = "3D144C5328C4F93B003FA6F7"
+            BuildableName = "IPlugExample.clap"
+            BlueprintName = "CLAP"
             ReferencedContainer = "container:IPlugExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -16,8 +16,6 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
-	<key>CFBundleSignature</key>
-	<string>Iplg</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>$(INFOPLIST_KEY_NSHumanReadableCopyright)</string>
 </dict>

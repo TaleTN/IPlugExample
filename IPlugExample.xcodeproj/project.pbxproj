@@ -8,6 +8,107 @@
 
 /* Begin PBXBuildFile section */
 		3D00CE9124603C2000E2E5A4 /* swell-gdi-internalpool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D00CE9024603C2000E2E5A4 /* swell-gdi-internalpool.h */; };
+		3D144C5528C4F93B003FA6F7 /* IPlugExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC2F3A245836F900882FA4 /* IPlugExample.cpp */; settings = {COMPILER_FLAGS = "-DCLAP_API"; }; };
+		3D144C5628C4F93B003FA6F7 /* Hosts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2A24584A5200527485 /* Hosts.cpp */; };
+		3D144C5728C4F93B003FA6F7 /* IControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C1B24584A5000527485 /* IControl.cpp */; };
+		3D144C5828C4F93B003FA6F7 /* IGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C1924584A5000527485 /* IGraphics.cpp */; };
+		3D144C5928C4F93B003FA6F7 /* IGraphicsCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */; };
+		3D144C5A28C4F93B003FA6F7 /* IGraphicsMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2C24584A5200527485 /* IGraphicsMac.mm */; };
+		3D144C5B28C4F93B003FA6F7 /* IParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2224584A5100527485 /* IParam.cpp */; };
+		3D144C5C28C4F93B003FA6F7 /* IPlugBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2124584A5100527485 /* IPlugBase.cpp */; };
+		3D144C5D28C4F93B003FA6F7 /* IPlugStructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C2E24584A5200527485 /* IPlugStructs.cpp */; };
+		3D144C5F28C4F93B003FA6F7 /* png.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C6024584CAF00527485 /* png.c */; };
+		3D144C6028C4F93B003FA6F7 /* pngerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C6224584CAF00527485 /* pngerror.c */; };
+		3D144C6128C4F93B003FA6F7 /* pngget.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C5C24584CAF00527485 /* pngget.c */; };
+		3D144C6228C4F93B003FA6F7 /* pngmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C5A24584CAF00527485 /* pngmem.c */; };
+		3D144C6328C4F93B003FA6F7 /* pngread.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C5D24584CAF00527485 /* pngread.c */; };
+		3D144C6428C4F93B003FA6F7 /* pngrio.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C5E24584CAF00527485 /* pngrio.c */; };
+		3D144C6528C4F93B003FA6F7 /* pngrtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C5F24584CAF00527485 /* pngrtran.c */; };
+		3D144C6628C4F93B003FA6F7 /* pngrutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C6124584CAF00527485 /* pngrutil.c */; };
+		3D144C6728C4F93B003FA6F7 /* pngset.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C6424584CAF00527485 /* pngset.c */; };
+		3D144C6828C4F93B003FA6F7 /* pngtrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C6324584CAF00527485 /* pngtrans.c */; };
+		3D144C6928C4F93B003FA6F7 /* lice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C4724584B2D00527485 /* lice.cpp */; };
+		3D144C6A28C4F93B003FA6F7 /* lice_arc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C4924584BA300527485 /* lice_arc.cpp */; };
+		3D144C6B28C4F93B003FA6F7 /* lice_line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C4D24584BA300527485 /* lice_line.cpp */; };
+		3D144C6C28C4F93B003FA6F7 /* lice_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C4E24584BA400527485 /* lice_png.cpp */; };
+		3D144C6D28C4F93B003FA6F7 /* lice_textnew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C4A24584BA300527485 /* lice_textnew.cpp */; };
+		3D144C6E28C4F93B003FA6F7 /* swell-gdi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D529CAA2458531100527485 /* swell-gdi.mm */; };
+		3D144C6F28C4F93B003FA6F7 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8624584F3200527485 /* adler32.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7028C4F93B003FA6F7 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8224584F3200527485 /* crc32.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7128C4F93B003FA6F7 /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8824584F3300527485 /* infback.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7228C4F93B003FA6F7 /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8924584F3300527485 /* inffast.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7328C4F93B003FA6F7 /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8E24584F3400527485 /* inflate.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7428C4F93B003FA6F7 /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C9024584F3400527485 /* inftrees.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7528C4F93B003FA6F7 /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C8124584F3200527485 /* trees.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7628C4F93B003FA6F7 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D529C9124584F3400527485 /* zutil.c */; settings = {COMPILER_FLAGS = "-DNO_GZCOMPRESS -DZ_SOLO"; }; };
+		3D144C7928C4F93B003FA6F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D529C13245847D400527485 /* Cocoa.framework */; };
+		3D144C7B28C4F93B003FA6F7 /* IPlugExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDC2F3C2458370100882FA4 /* IPlugExample.h */; };
+		3D144C7C28C4F93B003FA6F7 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDC2F3E2458371C00882FA4 /* resource.h */; };
+		3D144C7D28C4F93B003FA6F7 /* Containers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1824584A5000527485 /* Containers.h */; };
+		3D144C7E28C4F93B003FA6F7 /* Hosts.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1A24584A5000527485 /* Hosts.h */; };
+		3D144C7F28C4F93B003FA6F7 /* IControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2724584A5100527485 /* IControl.h */; };
+		3D144C8028C4F93B003FA6F7 /* IGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2324584A5100527485 /* IGraphics.h */; };
+		3D144C8128C4F93B003FA6F7 /* IGraphicsCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2924584A5100527485 /* IGraphicsCocoa.h */; };
+		3D144C8228C4F93B003FA6F7 /* IGraphicsMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1E24584A5000527485 /* IGraphicsMac.h */; };
+		3D144C8328C4F93B003FA6F7 /* IMidiQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27758125162D6300F354B7 /* IMidiQueue.h */; };
+		3D144C8428C4F93B003FA6F7 /* IParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2424584A5100527485 /* IParam.h */; };
+		3D144C8528C4F93B003FA6F7 /* IPlug_include_in_plug_hdr.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C1F24584A5000527485 /* IPlug_include_in_plug_hdr.h */; };
+		3D144C8628C4F93B003FA6F7 /* IPlug_include_in_plug_src.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2024584A5100527485 /* IPlug_include_in_plug_src.h */; };
+		3D144C8728C4F93B003FA6F7 /* IPlugBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2D24584A5200527485 /* IPlugBase.h */; };
+		3D144C8828C4F93B003FA6F7 /* IPlugStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C2624584A5100527485 /* IPlugStructs.h */; };
+		3D144C8A28C4F93B003FA6F7 /* assocarray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D4246D7760000BAC95 /* assocarray.h */; };
+		3D144C8B28C4F93B003FA6F7 /* db2val.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D3246D7760000BAC95 /* db2val.h */; };
+		3D144C8C28C4F93B003FA6F7 /* denormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27758425162F8300F354B7 /* denormal.h */; };
+		3D144C8D28C4F93B003FA6F7 /* heapbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D2246D7760000BAC95 /* heapbuf.h */; };
+		3D144C8E28C4F93B003FA6F7 /* mergesort.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D8246D7760000BAC95 /* mergesort.h */; };
+		3D144C8F28C4F93B003FA6F7 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DB246D7760000BAC95 /* mutex.h */; };
+		3D144C9028C4F93B003FA6F7 /* png.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C5B24584CAF00527485 /* png.h */; };
+		3D144C9128C4F93B003FA6F7 /* pngconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7624584D9500527485 /* pngconf.h */; };
+		3D144C9228C4F93B003FA6F7 /* pngdebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7524584D9500527485 /* pngdebug.h */; };
+		3D144C9328C4F93B003FA6F7 /* pnginfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7C24584DBE00527485 /* pnginfo.h */; };
+		3D144C9428C4F93B003FA6F7 /* pnglibconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7424584D9500527485 /* pnglibconf.h */; };
+		3D144C9528C4F93B003FA6F7 /* pngpriv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7A24584DBE00527485 /* pngpriv.h */; };
+		3D144C9628C4F93B003FA6F7 /* pngstruct.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7B24584DBE00527485 /* pngstruct.h */; };
+		3D144C9728C4F93B003FA6F7 /* curverasterbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7024584D5300527485 /* curverasterbuffer.h */; };
+		3D144C9828C4F93B003FA6F7 /* lice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C4B24584BA300527485 /* lice.h */; };
+		3D144C9928C4F93B003FA6F7 /* lice_bezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C7124584D5400527485 /* lice_bezier.h */; };
+		3D144C9A28C4F93B003FA6F7 /* lice_combine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C5624584BE500527485 /* lice_combine.h */; };
+		3D144C9B28C4F93B003FA6F7 /* lice_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C5524584BE500527485 /* lice_extended.h */; };
+		3D144C9C28C4F93B003FA6F7 /* lice_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C4C24584BA300527485 /* lice_text.h */; };
+		3D144C9D28C4F93B003FA6F7 /* ptrlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D1246D7760000BAC95 /* ptrlist.h */; };
+		3D144C9E28C4F93B003FA6F7 /* queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D5246D7760000BAC95 /* queue.h */; };
+		3D144C9F28C4F93B003FA6F7 /* swell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529CA92458531100527485 /* swell.h */; };
+		3D144CA028C4F93B003FA6F7 /* swell-functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529CAE245853D000527485 /* swell-functions.h */; };
+		3D144CA128C4F93B003FA6F7 /* swell-gdi-internalpool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D00CE9024603C2000E2E5A4 /* swell-gdi-internalpool.h */; };
+		3D144CA228C4F93B003FA6F7 /* swell-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529CAD245853D000527485 /* swell-internal.h */; };
+		3D144CA328C4F93B003FA6F7 /* swell-types.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529CB1245853F000527485 /* swell-types.h */; };
+		3D144CA428C4F93B003FA6F7 /* wdlatomic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D6246D7760000BAC95 /* wdlatomic.h */; };
+		3D144CA528C4F93B003FA6F7 /* wdlcstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D7246D7760000BAC95 /* wdlcstring.h */; };
+		3D144CA628C4F93B003FA6F7 /* wdlendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5D9246D7760000BAC95 /* wdlendian.h */; };
+		3D144CA728C4F93B003FA6F7 /* wdlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DC246D7760000BAC95 /* wdlstring.h */; };
+		3D144CA828C4F93B003FA6F7 /* wdltypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DA246D7760000BAC95 /* wdltypes.h */; };
+		3D144CA928C4F93B003FA6F7 /* crc32.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8D24584F3400527485 /* crc32.h */; };
+		3D144CAA28C4F93B003FA6F7 /* inffast.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8724584F3300527485 /* inffast.h */; };
+		3D144CAB28C4F93B003FA6F7 /* inffixed.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8C24584F3400527485 /* inffixed.h */; };
+		3D144CAC28C4F93B003FA6F7 /* inflate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8424584F3200527485 /* inflate.h */; };
+		3D144CAD28C4F93B003FA6F7 /* inftrees.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C9324584F3500527485 /* inftrees.h */; };
+		3D144CAE28C4F93B003FA6F7 /* trees.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8524584F3200527485 /* trees.h */; };
+		3D144CAF28C4F93B003FA6F7 /* zconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8B24584F3300527485 /* zconf.h */; };
+		3D144CB028C4F93B003FA6F7 /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C8A24584F3300527485 /* zlib.h */; };
+		3D144CB128C4F93B003FA6F7 /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D529C9224584F3500527485 /* zutil.h */; };
+		3D144CB528C4F93B003FA6F7 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0B2458433900527485 /* bg.png */; };
+		3D144CB628C4F93B003FA6F7 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0C2458433900527485 /* bg@2x.png */; };
+		3D144CB728C4F93B003FA6F7 /* bypass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758B25162FD500F354B7 /* bypass.png */; };
+		3D144CB828C4F93B003FA6F7 /* bypass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758925162FD500F354B7 /* bypass@2x.png */; };
+		3D144CB928C4F93B003FA6F7 /* handle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758825162FD500F354B7 /* handle.png */; };
+		3D144CBA28C4F93B003FA6F7 /* handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758C25162FD500F354B7 /* handle@2x.png */; };
+		3D144CBB28C4F93B003FA6F7 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0D2458433900527485 /* knob.png */; };
+		3D144CBC28C4F93B003FA6F7 /* knob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0F2458433900527485 /* knob@2x.png */; };
+		3D144CBD28C4F93B003FA6F7 /* shape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758A25162FD500F354B7 /* shape@2x.png */; };
+		3D144CBE28C4F93B003FA6F7 /* shape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D27758725162FD500F354B7 /* shape.png */; };
+		3D144CC428C4FAB3003FA6F7 /* IPlugCLAP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D144C4F28C4F8C8003FA6F7 /* IPlugCLAP.cpp */; };
+		3D144CC528C4FAB6003FA6F7 /* IPlugCLAP.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D144C5028C4F8C8003FA6F7 /* IPlugCLAP.h */; };
+		3D144CC628C4FAD4003FA6F7 /* clap.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D144C5228C4F925003FA6F7 /* clap.h */; };
 		3D27758225162D6300F354B7 /* IMidiQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27758125162D6300F354B7 /* IMidiQueue.h */; };
 		3D27758325162D6300F354B7 /* IMidiQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27758125162D6300F354B7 /* IMidiQueue.h */; };
 		3D27758525162F8400F354B7 /* denormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27758425162F8300F354B7 /* denormal.h */; };
@@ -210,7 +311,6 @@
 		3D85ACB12472DDC5004E8E3D /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D85ACB02472DDC5004E8E3D /* AudioUnit.framework */; };
 		3DC066ED24599DFA00516437 /* aeffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC066EA24599DFA00516437 /* aeffect.h */; };
 		3DC066EE24599DFA00516437 /* aeffectx.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC066EB24599DFA00516437 /* aeffectx.h */; };
-		3DC066EF24599DFA00516437 /* vstfxstore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC066EC24599DFA00516437 /* vstfxstore.h */; };
 		3DC066F12459A03F00516437 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0B2458433900527485 /* bg.png */; };
 		3DC066F22459A03F00516437 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0C2458433900527485 /* bg@2x.png */; };
 		3DC066F32459A03F00516437 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D529C0D2458433900527485 /* knob.png */; };
@@ -222,6 +322,11 @@
 
 /* Begin PBXFileReference section */
 		3D00CE9024603C2000E2E5A4 /* swell-gdi-internalpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-gdi-internalpool.h"; path = "WDL/swell/swell-gdi-internalpool.h"; sourceTree = "<group>"; };
+		3D144C4F28C4F8C8003FA6F7 /* IPlugCLAP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugCLAP.cpp; path = IPlug/IPlugCLAP.cpp; sourceTree = "<group>"; };
+		3D144C5028C4F8C8003FA6F7 /* IPlugCLAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugCLAP.h; path = IPlug/IPlugCLAP.h; sourceTree = "<group>"; };
+		3D144C5228C4F925003FA6F7 /* clap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clap.h; path = clap/clap.h; sourceTree = "<group>"; };
+		3D144CC228C4F93B003FA6F7 /* IPlugExample.clap */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPlugExample.clap; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D144CC328C4F93B003FA6F7 /* CLAP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CLAP-Info.plist"; path = "/Users/tale/IPlugExample/CLAP-Info.plist"; sourceTree = "<absolute>"; };
 		3D27758125162D6300F354B7 /* IMidiQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMidiQueue.h; path = IPlug/IMidiQueue.h; sourceTree = "<group>"; };
 		3D27758425162F8300F354B7 /* denormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = denormal.h; path = WDL/denormal.h; sourceTree = "<group>"; };
 		3D27758725162FD500F354B7 /* shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape.png; path = img/shape.png; sourceTree = "<group>"; };
@@ -333,7 +438,6 @@
 		3D85ACB02472DDC5004E8E3D /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		3DC066EA24599DFA00516437 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aeffect.h; path = VST2_SDK/aeffect.h; sourceTree = "<group>"; };
 		3DC066EB24599DFA00516437 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aeffectx.h; path = VST2_SDK/aeffectx.h; sourceTree = "<group>"; };
-		3DC066EC24599DFA00516437 /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vstfxstore.h; path = VST2_SDK/vstfxstore.h; sourceTree = "<group>"; };
 		3DCA573024583673009F1E70 /* IPlugExample.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPlugExample.vst; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDC2F3A245836F900882FA4 /* IPlugExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IPlugExample.cpp; sourceTree = "<group>"; };
 		3DDC2F3C2458370100882FA4 /* IPlugExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlugExample.h; sourceTree = "<group>"; };
@@ -341,6 +445,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3D144C7728C4F93B003FA6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D144C7928C4F93B003FA6F7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D43DA0D246E8C8D004AFF08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +476,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D144C5128C4F905003FA6F7 /* clap */ = {
+			isa = PBXGroup;
+			children = (
+				3D144C5228C4F925003FA6F7 /* clap.h */,
+			);
+			name = clap;
+			sourceTree = "<group>";
+		};
 		3D529C08245842B000527485 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,10 +531,10 @@
 				3D529C2724584A5100527485 /* IControl.h */,
 				3D529C1924584A5000527485 /* IGraphics.cpp */,
 				3D529C2324584A5100527485 /* IGraphics.h */,
-				3D529C2C24584A5200527485 /* IGraphicsMac.mm */,
-				3D529C1E24584A5000527485 /* IGraphicsMac.h */,
 				3D529C2B24584A5200527485 /* IGraphicsCocoa.mm */,
 				3D529C2924584A5100527485 /* IGraphicsCocoa.h */,
+				3D529C2C24584A5200527485 /* IGraphicsMac.mm */,
+				3D529C1E24584A5000527485 /* IGraphicsMac.h */,
 				3D27758125162D6300F354B7 /* IMidiQueue.h */,
 				3D529C2224584A5100527485 /* IParam.cpp */,
 				3D529C2424584A5100527485 /* IParam.h */,
@@ -426,6 +546,8 @@
 				3D738529246E937800582D74 /* IPlugAU_ViewFactory.mm */,
 				3D529C2124584A5100527485 /* IPlugBase.cpp */,
 				3D529C2D24584A5200527485 /* IPlugBase.h */,
+				3D144C4F28C4F8C8003FA6F7 /* IPlugCLAP.cpp */,
+				3D144C5028C4F8C8003FA6F7 /* IPlugCLAP.h */,
 				3D529C2E24584A5200527485 /* IPlugStructs.cpp */,
 				3D529C2624584A5100527485 /* IPlugStructs.h */,
 				3D529C1D24584A5000527485 /* IPlugVST2.cpp */,
@@ -551,7 +673,6 @@
 			children = (
 				3DC066EA24599DFA00516437 /* aeffect.h */,
 				3DC066EB24599DFA00516437 /* aeffectx.h */,
-				3DC066EC24599DFA00516437 /* vstfxstore.h */,
 			);
 			name = VST2_SDK;
 			sourceTree = "<group>";
@@ -564,9 +685,11 @@
 				3DDC2F3C2458370100882FA4 /* IPlugExample.h */,
 				3DDC2F3E2458371C00882FA4 /* resource.h */,
 				3D738595246E962400582D74 /* AU-Info.plist */,
+				3D144CC328C4F93B003FA6F7 /* CLAP-Info.plist */,
 				3D529C112458448E00527485 /* VST2-Info.plist */,
 				3D529C17245849E000527485 /* IPlug */,
 				3D529CA72458517C00527485 /* WDL */,
+				3D144C5128C4F905003FA6F7 /* clap */,
 				3DC066E924599DCC00516437 /* VST2_SDK */,
 				3D529C08245842B000527485 /* Resources */,
 				3D529C12245847D400527485 /* Frameworks */,
@@ -577,8 +700,9 @@
 		3DCA573124583673009F1E70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DCA573024583673009F1E70 /* IPlugExample.vst */,
+				3D144CC228C4F93B003FA6F7 /* IPlugExample.clap */,
 				3D43DA10246E8C8D004AFF08 /* IPlugExample.component */,
+				3DCA573024583673009F1E70 /* IPlugExample.vst */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -586,6 +710,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3D144C7A28C4F93B003FA6F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D144C7B28C4F93B003FA6F7 /* IPlugExample.h in Headers */,
+				3D144C7C28C4F93B003FA6F7 /* resource.h in Headers */,
+				3D144C7D28C4F93B003FA6F7 /* Containers.h in Headers */,
+				3D144C7E28C4F93B003FA6F7 /* Hosts.h in Headers */,
+				3D144C7F28C4F93B003FA6F7 /* IControl.h in Headers */,
+				3D144C8028C4F93B003FA6F7 /* IGraphics.h in Headers */,
+				3D144C8128C4F93B003FA6F7 /* IGraphicsCocoa.h in Headers */,
+				3D144C8228C4F93B003FA6F7 /* IGraphicsMac.h in Headers */,
+				3D144C8328C4F93B003FA6F7 /* IMidiQueue.h in Headers */,
+				3D144C8428C4F93B003FA6F7 /* IParam.h in Headers */,
+				3D144C8528C4F93B003FA6F7 /* IPlug_include_in_plug_hdr.h in Headers */,
+				3D144C8628C4F93B003FA6F7 /* IPlug_include_in_plug_src.h in Headers */,
+				3D144C8728C4F93B003FA6F7 /* IPlugBase.h in Headers */,
+				3D144CC528C4FAB6003FA6F7 /* IPlugCLAP.h in Headers */,
+				3D144C8828C4F93B003FA6F7 /* IPlugStructs.h in Headers */,
+				3D144C8A28C4F93B003FA6F7 /* assocarray.h in Headers */,
+				3D144C8B28C4F93B003FA6F7 /* db2val.h in Headers */,
+				3D144C8C28C4F93B003FA6F7 /* denormal.h in Headers */,
+				3D144C8D28C4F93B003FA6F7 /* heapbuf.h in Headers */,
+				3D144C8E28C4F93B003FA6F7 /* mergesort.h in Headers */,
+				3D144C8F28C4F93B003FA6F7 /* mutex.h in Headers */,
+				3D144C9028C4F93B003FA6F7 /* png.h in Headers */,
+				3D144C9128C4F93B003FA6F7 /* pngconf.h in Headers */,
+				3D144C9228C4F93B003FA6F7 /* pngdebug.h in Headers */,
+				3D144C9328C4F93B003FA6F7 /* pnginfo.h in Headers */,
+				3D144C9428C4F93B003FA6F7 /* pnglibconf.h in Headers */,
+				3D144C9528C4F93B003FA6F7 /* pngpriv.h in Headers */,
+				3D144C9628C4F93B003FA6F7 /* pngstruct.h in Headers */,
+				3D144C9728C4F93B003FA6F7 /* curverasterbuffer.h in Headers */,
+				3D144C9828C4F93B003FA6F7 /* lice.h in Headers */,
+				3D144C9928C4F93B003FA6F7 /* lice_bezier.h in Headers */,
+				3D144C9A28C4F93B003FA6F7 /* lice_combine.h in Headers */,
+				3D144C9B28C4F93B003FA6F7 /* lice_extended.h in Headers */,
+				3D144C9C28C4F93B003FA6F7 /* lice_text.h in Headers */,
+				3D144C9D28C4F93B003FA6F7 /* ptrlist.h in Headers */,
+				3D144C9E28C4F93B003FA6F7 /* queue.h in Headers */,
+				3D144C9F28C4F93B003FA6F7 /* swell.h in Headers */,
+				3D144CA028C4F93B003FA6F7 /* swell-functions.h in Headers */,
+				3D144CA128C4F93B003FA6F7 /* swell-gdi-internalpool.h in Headers */,
+				3D144CA228C4F93B003FA6F7 /* swell-internal.h in Headers */,
+				3D144CA328C4F93B003FA6F7 /* swell-types.h in Headers */,
+				3D144CA428C4F93B003FA6F7 /* wdlatomic.h in Headers */,
+				3D144CA528C4F93B003FA6F7 /* wdlcstring.h in Headers */,
+				3D144CA628C4F93B003FA6F7 /* wdlendian.h in Headers */,
+				3D144CA728C4F93B003FA6F7 /* wdlstring.h in Headers */,
+				3D144CA828C4F93B003FA6F7 /* wdltypes.h in Headers */,
+				3D144CA928C4F93B003FA6F7 /* crc32.h in Headers */,
+				3D144CAA28C4F93B003FA6F7 /* inffast.h in Headers */,
+				3D144CAB28C4F93B003FA6F7 /* inffixed.h in Headers */,
+				3D144CAC28C4F93B003FA6F7 /* inflate.h in Headers */,
+				3D144CAD28C4F93B003FA6F7 /* inftrees.h in Headers */,
+				3D144CAE28C4F93B003FA6F7 /* trees.h in Headers */,
+				3D144CAF28C4F93B003FA6F7 /* zconf.h in Headers */,
+				3D144CB028C4F93B003FA6F7 /* zlib.h in Headers */,
+				3D144CB128C4F93B003FA6F7 /* zutil.h in Headers */,
+				3D144CC628C4FAD4003FA6F7 /* clap.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D738531246E94E500582D74 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -710,21 +897,38 @@
 				3D529CA524584F3500527485 /* zutil.h in Headers */,
 				3DC066ED24599DFA00516437 /* aeffect.h in Headers */,
 				3DC066EE24599DFA00516437 /* aeffectx.h in Headers */,
-				3DC066EF24599DFA00516437 /* vstfxstore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3D144C5328C4F93B003FA6F7 /* CLAP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D144CBF28C4F93B003FA6F7 /* Build configuration list for PBXNativeTarget "CLAP" */;
+			buildPhases = (
+				3D144C7A28C4F93B003FA6F7 /* Headers */,
+				3D144C5428C4F93B003FA6F7 /* Sources */,
+				3D144C7728C4F93B003FA6F7 /* Frameworks */,
+				3D144CB428C4F93B003FA6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLAP;
+			productName = CLAP;
+			productReference = 3D144CC228C4F93B003FA6F7 /* IPlugExample.clap */;
+			productType = "com.apple.product-type.bundle";
+		};
 		3D43DA0F246E8C8D004AFF08 /* AU */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D43DA15246E8C8D004AFF08 /* Build configuration list for PBXNativeTarget "AU" */;
 			buildPhases = (
+				3D738531246E94E500582D74 /* Headers */,
 				3D43DA0C246E8C8D004AFF08 /* Sources */,
 				3D43DA0D246E8C8D004AFF08 /* Frameworks */,
 				3D43DA0E246E8C8D004AFF08 /* Resources */,
-				3D738531246E94E500582D74 /* Headers */,
 				3D738598246E968C00582D74 /* Rez */,
 			);
 			buildRules = (
@@ -740,9 +944,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DCA573424583673009F1E70 /* Build configuration list for PBXNativeTarget "VST2" */;
 			buildPhases = (
+				3DCA572E24583673009F1E70 /* Headers */,
 				3DCA572C24583673009F1E70 /* Sources */,
 				3DCA572D24583673009F1E70 /* Frameworks */,
-				3DCA572E24583673009F1E70 /* Headers */,
 				3DC066F02459A03100516437 /* Resources */,
 			);
 			buildRules = (
@@ -760,16 +964,8 @@
 		3DCA572824583673009F1E70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "";
-				TargetAttributes = {
-					3D43DA0F246E8C8D004AFF08 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-					3DCA572F24583673009F1E70 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-				};
 			};
 			buildConfigurationList = 3DCA572B24583673009F1E70 /* Build configuration list for PBXProject "IPlugExample" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -784,13 +980,31 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DCA572F24583673009F1E70 /* VST2 */,
 				3D43DA0F246E8C8D004AFF08 /* AU */,
+				3D144C5328C4F93B003FA6F7 /* CLAP */,
+				3DCA572F24583673009F1E70 /* VST2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3D144CB428C4F93B003FA6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D144CB528C4F93B003FA6F7 /* bg.png in Resources */,
+				3D144CB628C4F93B003FA6F7 /* bg@2x.png in Resources */,
+				3D144CB728C4F93B003FA6F7 /* bypass.png in Resources */,
+				3D144CB828C4F93B003FA6F7 /* bypass@2x.png in Resources */,
+				3D144CB928C4F93B003FA6F7 /* handle.png in Resources */,
+				3D144CBA28C4F93B003FA6F7 /* handle@2x.png in Resources */,
+				3D144CBB28C4F93B003FA6F7 /* knob.png in Resources */,
+				3D144CBC28C4F93B003FA6F7 /* knob@2x.png in Resources */,
+				3D144CBE28C4F93B003FA6F7 /* shape.png in Resources */,
+				3D144CBD28C4F93B003FA6F7 /* shape@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D43DA0E246E8C8D004AFF08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -820,8 +1034,8 @@
 				3D27759725162FD600F354B7 /* handle@2x.png in Resources */,
 				3DC066F32459A03F00516437 /* knob.png in Resources */,
 				3DC066F42459A03F00516437 /* knob@2x.png in Resources */,
-				3D27759325162FD600F354B7 /* shape@2x.png in Resources */,
 				3D27758D25162FD600F354B7 /* shape.png in Resources */,
+				3D27759325162FD600F354B7 /* shape@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +1053,47 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3D144C5428C4F93B003FA6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D144C5528C4F93B003FA6F7 /* IPlugExample.cpp in Sources */,
+				3D144C5628C4F93B003FA6F7 /* Hosts.cpp in Sources */,
+				3D144C5728C4F93B003FA6F7 /* IControl.cpp in Sources */,
+				3D144C5828C4F93B003FA6F7 /* IGraphics.cpp in Sources */,
+				3D144C5928C4F93B003FA6F7 /* IGraphicsCocoa.mm in Sources */,
+				3D144C5A28C4F93B003FA6F7 /* IGraphicsMac.mm in Sources */,
+				3D144C5B28C4F93B003FA6F7 /* IParam.cpp in Sources */,
+				3D144C5C28C4F93B003FA6F7 /* IPlugBase.cpp in Sources */,
+				3D144CC428C4FAB3003FA6F7 /* IPlugCLAP.cpp in Sources */,
+				3D144C5D28C4F93B003FA6F7 /* IPlugStructs.cpp in Sources */,
+				3D144C5F28C4F93B003FA6F7 /* png.c in Sources */,
+				3D144C6028C4F93B003FA6F7 /* pngerror.c in Sources */,
+				3D144C6128C4F93B003FA6F7 /* pngget.c in Sources */,
+				3D144C6228C4F93B003FA6F7 /* pngmem.c in Sources */,
+				3D144C6328C4F93B003FA6F7 /* pngread.c in Sources */,
+				3D144C6428C4F93B003FA6F7 /* pngrio.c in Sources */,
+				3D144C6528C4F93B003FA6F7 /* pngrtran.c in Sources */,
+				3D144C6628C4F93B003FA6F7 /* pngrutil.c in Sources */,
+				3D144C6728C4F93B003FA6F7 /* pngset.c in Sources */,
+				3D144C6828C4F93B003FA6F7 /* pngtrans.c in Sources */,
+				3D144C6928C4F93B003FA6F7 /* lice.cpp in Sources */,
+				3D144C6A28C4F93B003FA6F7 /* lice_arc.cpp in Sources */,
+				3D144C6B28C4F93B003FA6F7 /* lice_line.cpp in Sources */,
+				3D144C6C28C4F93B003FA6F7 /* lice_png.cpp in Sources */,
+				3D144C6D28C4F93B003FA6F7 /* lice_textnew.cpp in Sources */,
+				3D144C6E28C4F93B003FA6F7 /* swell-gdi.mm in Sources */,
+				3D144C6F28C4F93B003FA6F7 /* adler32.c in Sources */,
+				3D144C7028C4F93B003FA6F7 /* crc32.c in Sources */,
+				3D144C7128C4F93B003FA6F7 /* infback.c in Sources */,
+				3D144C7228C4F93B003FA6F7 /* inffast.c in Sources */,
+				3D144C7328C4F93B003FA6F7 /* inflate.c in Sources */,
+				3D144C7428C4F93B003FA6F7 /* inftrees.c in Sources */,
+				3D144C7528C4F93B003FA6F7 /* trees.c in Sources */,
+				3D144C7628C4F93B003FA6F7 /* zutil.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D43DA0C246E8C8D004AFF08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -926,6 +1181,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3D144CC028C4F93B003FA6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_CLAP",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaleTN.clap.IPlugExample;
+				WRAPPER_EXTENSION = clap;
+			};
+			name = Debug;
+		};
+		3D144CC128C4F93B003FA6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_CLAP",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaleTN.clap.IPlugExample;
+				WRAPPER_EXTENSION = clap;
+			};
+			name = Release;
+		};
 		3D43DA13246E8C8D004AFF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1080,6 +1363,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3D144CBF28C4F93B003FA6F7 /* Build configuration list for PBXNativeTarget "CLAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D144CC028C4F93B003FA6F7 /* Debug */,
+				3D144CC128C4F93B003FA6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3D43DA15246E8C8D004AFF08 /* Build configuration list for PBXNativeTarget "AU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
