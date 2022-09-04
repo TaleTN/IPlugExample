@@ -15,10 +15,11 @@ then
 fi
 
 rm -rf ~/"Library/Audio/Plug-Ins/Components/$bundle.component/" || exit
+rm -rf ~/"Library/Audio/Plug-Ins/CLAP/$bundle.clap/" || exit
 rm -rf ~/"Library/Audio/Plug-Ins/VST/$bundle.vst/" || exit
 
 xcodebuild clean || exit
 
-for target in AU VST2; do
+for target in AU CLAP VST2; do
 	xcodebuild -configuration Release ndebug=NDEBUG GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS=NO -target $target install || exit
 done
