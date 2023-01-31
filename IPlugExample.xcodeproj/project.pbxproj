@@ -326,7 +326,7 @@
 		3D144C5028C4F8C8003FA6F7 /* IPlugCLAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugCLAP.h; path = IPlug/IPlugCLAP.h; sourceTree = "<group>"; };
 		3D144C5228C4F925003FA6F7 /* clap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clap.h; path = clap/clap.h; sourceTree = "<group>"; };
 		3D144CC228C4F93B003FA6F7 /* IPlugExample.clap */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPlugExample.clap; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D144CC328C4F93B003FA6F7 /* CLAP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CLAP-Info.plist"; path = "/Users/tale/IPlugExample/CLAP-Info.plist"; sourceTree = "<absolute>"; };
+		3D144CC328C4F93B003FA6F7 /* CLAP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLAP-Info.plist"; sourceTree = "<group>"; };
 		3D27758125162D6300F354B7 /* IMidiQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMidiQueue.h; path = IPlug/IMidiQueue.h; sourceTree = "<group>"; };
 		3D27758425162F8300F354B7 /* denormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = denormal.h; path = WDL/denormal.h; sourceTree = "<group>"; };
 		3D27758725162FD500F354B7 /* shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shape.png; path = img/shape.png; sourceTree = "<group>"; };
@@ -1190,7 +1190,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TaleTN.clap.IPlugExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.clap.$(PROJECT_NAME:rfc1034identifier)";
 				WRAPPER_EXTENSION = clap;
 			};
 			name = Debug;
@@ -1204,7 +1204,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TaleTN.clap.IPlugExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.clap.$(PROJECT_NAME:rfc1034identifier)";
 				WRAPPER_EXTENSION = clap;
 			};
 			name = Release;
