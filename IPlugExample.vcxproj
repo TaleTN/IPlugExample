@@ -287,7 +287,9 @@
     <Image Include="img\shape%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="IPlugExample.rc" />
+    <ResourceCompile Include="IPlugExample.rc">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);CLAP_API</PreprocessorDefinitions>
+    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IPlug\Hosts.cpp" />
