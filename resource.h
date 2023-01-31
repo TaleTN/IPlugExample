@@ -17,8 +17,8 @@
 #ifdef __APPLE__
 	// To-do: Set Product Bundle Indentifier in Xcode project to
 	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME (AU target),
-	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target), and
-	// BUNDLE_DOMAIN.clap.BUNDLE_NAME (CLAP target).
+	// BUNDLE_DOMAIN.clap.BUNDLE_NAME (CLAP target), and
+	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
 
 	// No spaces.
 	#define PLUG_FACTORY    PlugExample_Factory
@@ -40,7 +40,7 @@
 #define VERSIONINFO_STR        "0.8.0"
 
 #define VERSIONINFO_PRERELEASE // Define if alpha, beta, or RC
-#define VERSIONINFO_COPYRIGHT "2020-2022 Theo Niessink"
+#define VERSIONINFO_COPYRIGHT "2020-2023 Theo Niessink"
 
 // Windows version info resource (optional).
 #ifdef _WIN32
