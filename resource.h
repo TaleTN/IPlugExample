@@ -44,8 +44,7 @@
 
 // Windows version info resource (optional).
 #ifdef _WIN32
-	// #define VERSIONINFO_CODE_NAME  "Project X"
-	#define VERSIONINFO_ORG_FILE "IPlugExample.dll"
+	#define VERSIONINFO_ORG_FILE "IPlugExample"
 
 // Apple version info (non-optional).
 #elif defined(__APPLE__)

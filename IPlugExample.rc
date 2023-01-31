@@ -46,15 +46,19 @@ BEGIN
 			VALUE "CompanyName",      PLUG_MFR
 			VALUE "FileDescription",  PLUG_NAME
 			VALUE "FileVersion",      VERSIONINFO_STR
-			#ifdef VERSIONINFO_CODE_NAME
-			VALUE "InternalName",     VERSIONINFO_CODE_NAME
-			#else
-			VALUE "InternalName",     PLUG_NAME
-			#endif
+			VALUE "InternalName",     VERSIONINFO_ORG_FILE
+
 			#ifdef VERSIONINFO_COPYRIGHT
 			VALUE "LegalCopyright",   "© " VERSIONINFO_COPYRIGHT
 			#endif
+
 			VALUE "OriginalFilename", VERSIONINFO_ORG_FILE
+			#ifdef CLAP_API
+				".clap"
+			#else
+				".dll"
+			#endif
+
 			VALUE "ProductName",      PLUG_NAME
 			VALUE "ProductVersion",   VERSIONINFO_STR
 		END
