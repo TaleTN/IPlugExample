@@ -85,8 +85,11 @@ img/knob@2x.png \
 img/shape.png \
 img/shape@2x.png
 
-"$(OUTDIR)/$(PROJECT).res" : "$(PROJECT).rc" resource.h $(RESOURCES)
-	$(RC) $(RCFLAGS) /fo$@ "$(PROJECT).rc"
+"$(OUTDIR)/$(PROJECT)_CLAP.res" : "$(PROJECT).rc" resource.h $(RESOURCES)
+	$(RC) $(RCFLAGS) /D CLAP_API /fo$@ "$(PROJECT).rc"
+
+"$(OUTDIR)/$(PROJECT)_VST2.res" : "$(PROJECT).rc" resource.h $(RESOURCES)
+	$(RC) $(RCFLAGS) /D VST2_API /fo$@ "$(PROJECT).rc"
 
 IPLUG = \
 "$(OUTDIR)/Hosts.obj" \
@@ -183,11 +186,11 @@ shell32.lib \
 user32.lib \
 wininet.lib
 
-"$(OUTDIR)/$(OUTFILE).clap" : "$(OUTDIR)/$(PROJECT)_CLAP.obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" $(LIBPNG) $(LICE) $(ZLIB)
+"$(OUTDIR)/$(OUTFILE).clap" : "$(OUTDIR)/$(PROJECT)_CLAP.obj" "$(OUTDIR)/$(PROJECT)_CLAP.res" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" $(LIBPNG) $(LICE) $(ZLIB)
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)_CLAP.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)_CLAP.lib" $** $(LIBS)
 
-"$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)_VST2.obj" "$(OUTDIR)/$(PROJECT).res" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj" $(LIBPNG) $(LICE) $(ZLIB)
+"$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)_VST2.obj" "$(OUTDIR)/$(PROJECT)_VST2.res" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj" $(LIBPNG) $(LICE) $(ZLIB)
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)_VST2.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)_VST2.lib" $** $(LIBS)
 
