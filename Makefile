@@ -66,13 +66,33 @@ all : clap
 	mkdir $@
 !ENDIF
 
-"$(OUTDIR)/$(PROJECT)_CLAP.obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugCLAP.h
+IPLUGINC = \
+IPlug/Containers.h \
+IPlug/Hosts.h \
+IPlug/IControl.h \
+IPlug/IGraphics.h \
+IPlug/IGraphicsWin.h \
+IPlug/IParam.h \
+IPlug/IPlug_include_in_plug_hdr.h \
+IPlug/IPlug_include_in_plug_src.h \
+IPlug/IPlugBase.h \
+IPlug/IPlugStructs.h
+
+SOURCES = \
+"$(PROJECT).cpp" \
+"$(PROJECT).h" \
+resource.h \
+$(IPLUGINC)
+
+"$(OUTDIR)/$(PROJECT)_CLAP.obj" : $(SOURCES) IPlug/IPlugCLAP.h
 	$(CPP) $(CPPFLAGS) /D CLAP_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_CLAP.asm" "$(PROJECT).cpp"
 
-"$(OUTDIR)/$(PROJECT)_VST2.obj" : "$(PROJECT).cpp" "$(PROJECT).h" resource.h IPlug/Containers.h IPlug/Hosts.h IPlug/IControl.h IPlug/IGraphics.h IPlug/IGraphicsWin.h IPlug/IParam.h IPlug/IPlug_include_in_plug_hdr.h IPlug/IPlug_include_in_plug_src.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugVST2.h
+"$(OUTDIR)/$(PROJECT)_VST2.obj" : $(SOURCES) IPlug/IPlugVST2.h
 	$(CPP) $(CPPFLAGS) /D VST2_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_VST2.asm" "$(PROJECT).cpp"
 
 RESOURCES = \
+"$(PROJECT).rc" \
+resource.h \
 img/bg.png \
 img/bg@2x.png \
 img/bypass.png \
@@ -85,13 +105,13 @@ img/knob@2x.png \
 img/shape.png \
 img/shape@2x.png
 
-"$(OUTDIR)/$(PROJECT)_CLAP.res" : "$(PROJECT).rc" resource.h $(RESOURCES)
+"$(OUTDIR)/$(PROJECT)_CLAP.res" : $(RESOURCES)
 	$(RC) $(RCFLAGS) /D CLAP_API /fo$@ "$(PROJECT).rc"
 
-"$(OUTDIR)/$(PROJECT)_VST2.res" : "$(PROJECT).rc" resource.h $(RESOURCES)
+"$(OUTDIR)/$(PROJECT)_VST2.res" : $(RESOURCES)
 	$(RC) $(RCFLAGS) /D VST2_API /fo$@ "$(PROJECT).rc"
 
-IPLUG = \
+IPLUGOBJ = \
 "$(OUTDIR)/Hosts.obj" \
 "$(OUTDIR)/IControl.obj" \
 "$(OUTDIR)/IGraphics.obj" \
@@ -100,7 +120,7 @@ IPLUG = \
 "$(OUTDIR)/IPlugBase.obj" \
 "$(OUTDIR)/IPlugStructs.obj"
 
-iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.obj"
+iplug : "$(OUTDIR)" $(IPLUGOBJ) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.obj"
 
 #"$(OUTDIR)/Hosts.obj" : IPlug/Hosts.cpp IPlug/Hosts.h
 #	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_Hosts.asm" IPlug/Hosts.cpp
@@ -132,7 +152,7 @@ iplug : "$(OUTDIR)" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.obj"
 {IPlug}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" $<
 
-LIBPNG = \
+LIBPNGOBJ = \
 "$(OUTDIR)/png.obj" \
 "$(OUTDIR)/pngerror.obj" \
 "$(OUTDIR)/pngget.obj" \
@@ -144,24 +164,24 @@ LIBPNG = \
 "$(OUTDIR)/pngset.obj" \
 "$(OUTDIR)/pngtrans.obj"
 
-libpng : "$(OUTDIR)" $(LIBPNG)
+libpng : "$(OUTDIR)" $(LIBPNGOBJ)
 
 {WDL/libpng}.c{$(OUTDIR)}.obj ::
 	$(CC) $(CFLAGS) /Fo"$(OUTDIR)/" $<
 
-LICE = \
+LICEOBJ = \
 "$(OUTDIR)/lice.obj" \
 "$(OUTDIR)/lice_arc.obj" \
 "$(OUTDIR)/lice_line.obj" \
 "$(OUTDIR)/lice_png.obj" \
 "$(OUTDIR)/lice_textnew.obj"
 
-lice : "$(OUTDIR)" $(LICE)
+lice : "$(OUTDIR)" $(LICEOBJ)
 
 {WDL/lice}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" $<
 
-ZLIB = \
+ZLIBOBJ = \
 "$(OUTDIR)/adler32.obj" \
 "$(OUTDIR)/crc32.obj" \
 "$(OUTDIR)/infback.obj" \
@@ -171,10 +191,16 @@ ZLIB = \
 "$(OUTDIR)/trees.obj" \
 "$(OUTDIR)/zutil.obj"
 
-zlib : "$(OUTDIR)" $(ZLIB)
+zlib : "$(OUTDIR)" $(ZLIBOBJ)
 
 {WDL/zlib}.c{$(OUTDIR)}.obj ::
 	$(CC) $(CFLAGS) /D NO_GZCOMPRESS /D Z_SOLO /Fo"$(OUTDIR)/" $<
+
+OBJECTS = \
+$(IPLUGOBJ) \
+$(LIBPNGOBJ) \
+$(LICEOBJ) \
+$(ZLIBOBJ)
 
 LIBS = \
 advapi32.lib \
@@ -186,11 +212,11 @@ shell32.lib \
 user32.lib \
 wininet.lib
 
-"$(OUTDIR)/$(OUTFILE).clap" : "$(OUTDIR)/$(PROJECT)_CLAP.obj" "$(OUTDIR)/$(PROJECT)_CLAP.res" $(IPLUG) "$(OUTDIR)/IPlugCLAP.obj" $(LIBPNG) $(LICE) $(ZLIB)
+"$(OUTDIR)/$(OUTFILE).clap" : "$(OUTDIR)/$(PROJECT)_CLAP.obj" "$(OUTDIR)/$(PROJECT)_CLAP.res" "$(OUTDIR)/IPlugCLAP.obj" $(OBJECTS)
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)_CLAP.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)_CLAP.lib" $** $(LIBS)
 
-"$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)_VST2.obj" "$(OUTDIR)/$(PROJECT)_VST2.res" $(IPLUG) "$(OUTDIR)/IPlugVST2.obj" $(LIBPNG) $(LICE) $(ZLIB)
+"$(OUTDIR)/$(OUTFILE).dll" : "$(OUTDIR)/$(PROJECT)_VST2.obj" "$(OUTDIR)/$(PROJECT)_VST2.res" "$(OUTDIR)/IPlugVST2.obj" $(OBJECTS)
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)_VST2.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)_VST2.lib" $** $(LIBS)
 
