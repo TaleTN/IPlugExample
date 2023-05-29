@@ -201,6 +201,6 @@ To build a production release you can run the [`makedist.cmd`](makedist.cmd)
 prompt or terminal. A next step would be to bundle production releases in a
 ZIP file or installer, but that is beyond the scope of this example.
 
-# License
+## License
 
 WDL license, see [License.txt](License.txt).
