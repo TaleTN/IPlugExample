@@ -1,7 +1,7 @@
 # IPlug Example
 
-A simple tremolo audio effect plugin (CLAP/VST2/AU) for Windows and macOS,
-serving as an example for the
+A simple tremolo audio effect plugin (CLAP/VST2/AU/AAX) for Windows and
+macOS, serving as an example for the
 [IPlug "Tale" Edition](https://github.com/TaleTN/IPlug) plugin framework.
 
 ## Getting started
@@ -14,6 +14,7 @@ and additional projects:
 3. [WDL library](#wdl-library)
 4. [CLAP headers](#clap-headers)
 5. [VST 2.4 SDK](#vst-24-sdk)
+6. [AAX SDK](#aax-sdk)
 
 Note that this readme describes the toolset we actually use at
 [Martinic](https://www.martinic.com/). You could probably use a different
@@ -144,7 +145,7 @@ IPlugExample/WDL/assocarray.h, ...
 IPlugExample/VST2_SDK/aeffect.h, aeffectx.h       <-- VST2_SDK goes here
 ```
 
-You will find these header files in the `pluginterfaces/vst2.x/` directory
+You will find these header files in the `pluginterfaces/vst2.x` directory
 inside the VST 2.4 or [VST 3 SDK](https://www.steinberg.net/developers/),
 but you will need v3.6 or older. You used to be able to download v3.6.6
 here:
@@ -153,6 +154,27 @@ https://www.steinberg.net/sdk_downloads/vstsdk366_27_06_2016_build_61.zip
 
 However, it would seem that it is no longer available, courtesy of
 [Steinberg](https://www.steinberg.net/).
+
+## AAX SDK
+
+For AAX ([Pro Tools](https://www.avid.com/pro-tools)) support you will need
+the AAX SDK from Avid, which you can download from here:
+
+https://my.avid.com/products/cppsdk  (developer account required)
+
+The AAX SDK comes as a ZIP file, from which you will need only three
+directories: `Interfaces`, `Libs/AAXLibrary/include`, and
+`Libs/AAXLibrary/sources`. Extract them and place them in `aax-sdk` so
+you have:
+
+```
+IPlugExample/IPlugExample.cpp, ...
+IPlugExample/IPlug/Containers.h, ...
+IPlugExample/WDL/assocarray.h, ...
+IPlugExample/aax-sdk/Interfaces/AAX.h, ...        <-- aax-sdk goes here
+IPlugExample/aax-sdk/Libs/AAXLibrary/include/*
+IPlugExample/aax-sdk/Libs/AAXLibrary/source/*
+```
 
 ## How to build & run
 
@@ -163,6 +185,7 @@ Alternatively you can build the DLL from the command prompt by typing:
 1. `cd IPlugExample`
 2. `nmake clap`
 3. `nmake vst2`
+4. `nmake aax`
 
 Note that building from the command prompt should work with any somewhat
 recent Microsoft C/C++ toolset.
@@ -174,10 +197,20 @@ Then launch your hosting software of choice (e.g.
 [VSTHost](https://www.hermannseib.com/english/vsthost.htm)), and load the
 IPlug Example plugin.
 
+To run the AAX plugin copy `IPlugExample.aaxplugin` from
+`IPlugExample/x64/Release/` to:
+
+```
+C:\Program Files\Common Files\Avid\Audio\Plug-Ins\IPlugExample.aaxplugin\Contents\x64\
+```
+
+Then launch [Pro Tools](https://www.avid.com/pro-tools) Developer, and load
+the IPlug Example (stereo) plugin (under *multichannel plug-in* > *Effect*).
+
 On macOS open the [`IPlugExample.xcodeproj`](IPlugExample.xcodeproj) project
-in Xcode, and build the AU, CLAP, and/or VST2 target from within the IDE. If
-you build for running, then this will automatically copy the plugin to the
-user audio plugins folder.
+in Xcode, and build the AAX, AU, CLAP, and/or VST2 target from within the
+IDE. If you build for running, then this will automatically copy the plugin
+to the (user) audio plugins folder.
 
 To run the plugin launch your hosting software of choice (e.g.
 [REAPER](https://www.reaper.fm/) or
