@@ -1595,10 +1595,6 @@
 		3D144CC028C4F93B003FA6F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_CLAP",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.clap.$(PROJECT_NAME:rfc1034identifier)";
@@ -1609,10 +1605,6 @@
 		3D144CC128C4F93B003FA6F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_CLAP",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/CLAP-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/CLAP";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.clap.$(PROJECT_NAME:rfc1034identifier)";
@@ -1624,10 +1616,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/$(PROJECT).exp";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_AU",
-					"$(inherited)",
-				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/AU-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/Components";
@@ -1644,10 +1632,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXPORTED_SYMBOLS_FILE = "$(SRCROOT)/$(PROJECT).exp";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_AU",
-					"$(inherited)",
-				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/AU-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/Components";
@@ -1666,10 +1650,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_AAX",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/AAX-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Avid/Audio/Plug-Ins";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.aax.$(PROJECT_NAME:rfc1034identifier)";
@@ -1683,10 +1663,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_AAX",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/AAX-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Avid/Audio/Plug-Ins";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.aax.$(PROJECT_NAME:rfc1034identifier)";
@@ -1718,6 +1694,8 @@
 					"DEBUG=1",
 					WDL_DENORMAL_WANTS_SCOPED_FTZ,
 					IPLUG_NO_CARBON_SUPPORT,
+					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_$(TARGET_NAME:identifier)",
+					"SWELL_APP_PREFIX=IGRAPHICS_COCOA",
 					SWELL_NO_METAL,
 					"$(inherited)",
 				);
@@ -1759,6 +1737,8 @@
 					"$(ndebug)",
 					WDL_DENORMAL_WANTS_SCOPED_FTZ,
 					IPLUG_NO_CARBON_SUPPORT,
+					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_$(TARGET_NAME:identifier)",
+					"SWELL_APP_PREFIX=IGRAPHICS_COCOA",
 					SWELL_NO_METAL,
 					"$(inherited)",
 				);
@@ -1780,10 +1760,6 @@
 		3DCA573524583673009F1E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_VST",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/VST2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/VST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.vst.$(PROJECT_NAME:rfc1034identifier)";
@@ -1794,10 +1770,6 @@
 		3DCA573624583673009F1E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"IGRAPHICS_COCOA=$(PRODUCT_NAME:identifier)_VST",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/VST2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/VST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaleTN.vst.$(PROJECT_NAME:rfc1034identifier)";
