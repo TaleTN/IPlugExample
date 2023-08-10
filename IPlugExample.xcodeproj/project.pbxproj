@@ -453,7 +453,7 @@
 		3D00CE9024603C2000E2E5A4 /* swell-gdi-internalpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "swell-gdi-internalpool.h"; path = "WDL/swell/swell-gdi-internalpool.h"; sourceTree = "<group>"; };
 		3D144C4F28C4F8C8003FA6F7 /* IPlugCLAP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugCLAP.cpp; path = IPlug/IPlugCLAP.cpp; sourceTree = "<group>"; };
 		3D144C5028C4F8C8003FA6F7 /* IPlugCLAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugCLAP.h; path = IPlug/IPlugCLAP.h; sourceTree = "<group>"; };
-		3D144C5228C4F925003FA6F7 /* clap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clap.h; path = clap/clap.h; sourceTree = "<group>"; };
+		3D144C5228C4F925003FA6F7 /* clap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = clap.h; path = CLAP_SDK/clap.h; sourceTree = "<group>"; };
 		3D144CC228C4F93B003FA6F7 /* IPlugExample.clap */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPlugExample.clap; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D144CC328C4F93B003FA6F7 /* CLAP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLAP-Info.plist"; sourceTree = "<group>"; };
 		3D27758125162D6300F354B7 /* IMidiQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMidiQueue.h; path = IPlug/IMidiQueue.h; sourceTree = "<group>"; };
@@ -646,12 +646,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D144C5128C4F905003FA6F7 /* clap */ = {
+		3D144C5128C4F905003FA6F7 /* CLAP_SDK */ = {
 			isa = PBXGroup;
 			children = (
 				3D144C5228C4F925003FA6F7 /* clap.h */,
 			);
-			name = clap;
+			name = CLAP_SDK;
 			sourceTree = "<group>";
 		};
 		3D529C08245842B000527485 /* Resources */ = {
@@ -931,7 +931,7 @@
 				3D529C17245849E000527485 /* IPlug */,
 				3D529CA72458517C00527485 /* WDL */,
 				3DBF772C2A3880870056A7AD /* AAX_SDK */,
-				3D144C5128C4F905003FA6F7 /* clap */,
+				3D144C5128C4F905003FA6F7 /* CLAP_SDK */,
 				3DC066E924599DCC00516437 /* VST2_SDK */,
 				3D529C08245842B000527485 /* Resources */,
 				3D529C12245847D400527485 /* Frameworks */,

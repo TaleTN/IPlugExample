@@ -122,14 +122,14 @@ headers. You can download CLAP from:
 
 https://github.com/free-audio/clap
 
-You will only need the header files in `include/clap`. Extract them so you
-have:
+You will only need the header files in `include/clap`. Extract them and
+place them in `CLAP_SDK` so you have:
 
 ```
 IPlugExample/IPlugExample.cpp, ...
 IPlugExample/IPlug/Containers.h, ...
 IPlugExample/WDL/assocarray.h, ...
-IPlugExample/clap/audio-buffer.h, ...             <-- clap goes here
+IPlugExample/CLAP_SDK/audio-buffer.h, ...         <-- CLAP_SDK goes here
 ```
 
 ## VST 2.4 SDK
@@ -179,8 +179,9 @@ IPlugExample/AAX_SDK/Libs/AAXLibrary/source/*
 ## How to build & run
 
 On Windows open the [`IPlugExample.sln`](IPlugExample.sln) solution in
-Visual Studio 2022, and build the VST 2.4 plugin DLL from within the IDE.
-Alternatively you can build the DLL from the command prompt by typing:
+Visual Studio 2022, and build the CLAP plugin from within the IDE.
+Alternatively you can build the CLAP plugin (as well as the other plugin
+formats) from the command prompt by typing:
 
 1. `cd IPlugExample`
 2. `nmake clap`

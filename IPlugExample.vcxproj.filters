@@ -8,7 +8,7 @@
     <Filter Include="Header Files\IPlug">
       <UniqueIdentifier>{f5b596c1-70bc-4d5b-8ac4-36d64bd0e566}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\clap">
+    <Filter Include="Header Files\CLAP_SDK">
       <UniqueIdentifier>{2af140e7-549d-49fd-814c-858ec484ba22}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\WDL">
@@ -84,8 +84,8 @@
     <ClInclude Include="IPlug\IPlugCLAP.h">
       <Filter>Header Files\IPlug</Filter>
     </ClInclude>
-    <ClInclude Include="clap\clap.h">
-      <Filter>Header Files\clap</Filter>
+    <ClInclude Include="CLAP_SDK\clap.h">
+      <Filter>Header Files\CLAP_SDK</Filter>
     </ClInclude>
     <ClInclude Include="WDL\libpng\png.h">
       <Filter>Header Files\WDL\libpng</Filter>
