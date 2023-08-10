@@ -164,16 +164,16 @@ https://my.avid.com/products/cppsdk  (developer account required)
 
 The AAX SDK comes as a ZIP file, from which you will need only three
 directories: `Interfaces`, `Libs/AAXLibrary/include`, and
-`Libs/AAXLibrary/sources`. Extract them and place them in `aax-sdk` so
+`Libs/AAXLibrary/sources`. Extract them and place them in `AAX_SDK` so
 you have:
 
 ```
 IPlugExample/IPlugExample.cpp, ...
 IPlugExample/IPlug/Containers.h, ...
 IPlugExample/WDL/assocarray.h, ...
-IPlugExample/aax-sdk/Interfaces/AAX.h, ...        <-- aax-sdk goes here
-IPlugExample/aax-sdk/Libs/AAXLibrary/include/*
-IPlugExample/aax-sdk/Libs/AAXLibrary/source/*
+IPlugExample/AAX_SDK/Interfaces/AAX.h, ...        <-- AAX_SDK goes here
+IPlugExample/AAX_SDK/Libs/AAXLibrary/include/*
+IPlugExample/AAX_SDK/Libs/AAXLibrary/source/*
 ```
 
 ## How to build & run
