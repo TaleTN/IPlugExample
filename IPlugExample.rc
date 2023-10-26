@@ -57,7 +57,9 @@ BEGIN
 				".clap"
 			#elif defined(AAX_API)
 				".aaxplugin"
-			#else
+			#elif defined(VST3_API)
+				".vst3"
+			#else // defined(VST2_API)
 				".dll"
 			#endif
 
