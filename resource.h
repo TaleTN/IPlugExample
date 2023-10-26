@@ -21,8 +21,9 @@
 	// To-do: Set Product Bundle Indentifier in Xcode project to
 	// BUNDLE_DOMAIN.aax.BUNDLE_NAME (AAX target),
 	// BUNDLE_DOMAIN.audiounit.BUNDLE_NAME (AU target),
-	// BUNDLE_DOMAIN.clap.BUNDLE_NAME (CLAP target), and
-	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target).
+	// BUNDLE_DOMAIN.clap.BUNDLE_NAME (CLAP target),
+	// BUNDLE_DOMAIN.vst.BUNDLE_NAME (VST2 target), and
+	// BUNDLE_DOMAIN.vst3.BUNDLE_NAME (VST3 target).
 
 	// No spaces.
 	#define PLUG_FACTORY    PlugExample_Factory
@@ -72,6 +73,15 @@
 // To-do: Set AudioComponents manufacturer and subtype in AU-Info.plist to
 // PLUG_MFR_ID and PLUG_UNIQUE_ID.
 
+// e1a04daa-24f8-481f-aac3-da0e978bd171 (source: https://guidgenerator.com/)
+#define PLUG_UNIQUE_GUID 0xE1A04DAA, 0x24F8481F, 0xAAC3DA0E, 0x978BD171
+// ab98e836-e9d2-4f8d-b55b-82dcafdf2907
+#define VST3_COMPAT_GUID 0xAB98E836, 0xE9D24F8D, 0xB55B82DC, 0xAFDF2907
+
+// Cubase VST2 -> VST3 compatibility (double quotes, no commas).
+#define VST3_COMPAT_OLD_GUIDS \
+	"56535449706C6769706C75676578616D" /* IPlugExample */
+
 // Plugin I/O config.
 #define PLUG_CHANNEL_IO "1-1 2-2"
 
@@ -85,6 +95,9 @@
 
 // To-do: Set AudioComponents type in AU-Info.plist to aufx (audio effect),
 // aumu (instrument), or aumf (audio effect with MIDI input).
+
+#define PLUG_MFR_URL   "https://www.taletn.com/"
+#define PLUG_MFR_EMAIL "eggbaconspam@steinberg.de"
 
 // Unique IDs for each image resource, bit 0 is scale (0 = full, 1 = half).
 
