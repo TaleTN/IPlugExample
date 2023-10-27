@@ -1,6 +1,6 @@
 # IPlug Example
 
-A simple tremolo audio effect plugin (CLAP/VST2/AU/AAX) for Windows and
+A simple tremolo audio effect plugin (AAX/AU/CLAP/VST2/VST3) for Windows and
 macOS, serving as an example for the
 [IPlug "Tale" Edition](https://github.com/TaleTN/IPlug) plugin framework.
 
@@ -14,7 +14,8 @@ and additional projects:
 3. [WDL library](#wdl-library)
 4. [CLAP headers](#clap-headers)
 5. [VST 2.4 SDK](#vst-24-sdk)
-6. [AAX SDK](#aax-sdk)
+6. [VST 3 SDK](#vst-3-sdk)
+7. [AAX SDK](#aax-sdk)
 
 Note that this readme describes the toolset we actually use at
 [Martinic](https://www.martinic.com/). You could probably use a different
@@ -56,10 +57,10 @@ example project:
 
 ## IPlug framework
 
-IPlug is a cross-platform CLAP/VST2/AU plugin framework for Windows and
-macOS, on which you can build audio plug-in effects and instruments. It was
-originally part of the [Cockos WDL](https://www.cockos.com/wdl/) library,
-but it has since evolved into different forks like
+IPlug is a cross-platform AAX/AU/CLAP/VST2/VST3 plugin framework for Windows
+and macOS, on which you can build audio plug-in effects and instruments. It
+was originally part of the [Cockos WDL](https://www.cockos.com/wdl/)
+library, but it has since evolved into different forks like
 [IPlug "Tale" Edition](https://github.com/TaleTN/IPlug) and
 [iPlug2](https://iplug2.github.io/) (formerly
 [WDL-OL](https://github.com/olilarkin/wdl-ol)). Note that this example will
@@ -153,7 +154,27 @@ here:
 https://www.steinberg.net/sdk_downloads/vstsdk366_27_06_2016_build_61.zip
 
 However, it would seem that it is no longer available, courtesy of
-[Steinberg](https://www.steinberg.net/).
+Steinberg.
+
+## VST 3 SDK
+
+For VST 3 support you will need the VST 3 Audio Plug-Ins SDK from Steinberg,
+which you can download from here:
+
+https://www.steinberg.net/developers/
+
+The VST 3 SDK comes as a ZIP file, and you will need only three directories
+from `VST_SDK/vst3sdk/` within this ZIP: `base`, `pluginterfaces`, and
+`public.sdk`. Extract them and place them in `VST3_SDK` so you have:
+
+```
+IPlugExample/IPlugExample.cpp, ...
+IPlugExample/IPlug/Containers.h, ...
+IPlugExample/WDL/assocarray.h, ...
+IPlugExample/VST3_SDK/base/*                      <-- VST3_SDK goes here
+IPlugExample/VST3_SDK/pluginterfaces/*
+IPlugExample/VST3_SDK/public.sdk/*
+```
 
 ## AAX SDK
 
@@ -186,15 +207,16 @@ formats) from the command prompt by typing:
 1. `cd IPlugExample`
 2. `nmake clap`
 3. `nmake vst2`
-4. `nmake aax`
+4. `nmake vst3`
+5. `nmake aax`
 
 Note that building from the command prompt should work with any somewhat
 recent Microsoft C/C++ toolset.
 
-To run the plugin copy `IPlugExample.clap` (CLAP) or `IPlugExample.dll`
-(VST2) from `IPlugExample/x64/Release/` to your CLAP or VST 2.4 plugin path.
-Then launch your hosting software of choice (e.g.
-[REAPER](https://www.reaper.fm/) or
+To run the plugin copy `IPlugExample.clap` (CLAP), `IPlugExample.dll`
+(VST2), or `IPlugExample.vst3` (VST3) from `IPlugExample/x64/Release/` to
+your CLAP, VST 2.4, or VST 3 plugin path. Then launch your hosting software
+of choice (e.g. [REAPER](https://www.reaper.fm/) or
 [VSTHost](https://www.hermannseib.com/english/vsthost.htm)), and load the
 IPlug Example plugin.
 
