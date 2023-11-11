@@ -341,6 +341,8 @@ wininet.lib
 	@echo ^ ^ ^ ^ ^ ^ ^ ^ link $(LINKFLAGS) /out:$@ "$(OUTDIR)/$(PROJECT)_AAX.obj" ...
 	@link $(LINKFLAGS) /out:$@ /implib:"$(OUTDIR)/$(PROJECT)_AAX.lib" $** $(LIBS)
 
+OUTDIR_OUTFILE = $(OUTDIR:/=\)\$(OUTFILE)
+
 clap : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).clap"
 
 vst2 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).dll"
@@ -349,8 +351,13 @@ vst3 : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).vst3"
 
 aax : "$(OUTDIR)" "$(OUTDIR)/$(OUTFILE).aaxplugin"
 
-sign-aax : aax
-#	wraptool sign --customernumber MYCU-STOM-ERNU-MBER --customername "Tale" --productname "IPlug Example" --signid "9ca1bf1665add1b51891e59b1746d9ec67106e12" --extrasigningoptions "digest_sha256" --in "$(OUTDIR_OUTFILE).aaxplugin" --out "$(OUTDIR_OUTFILE).aaxplugin"
+sign-aax : del-aax aax
+#	wraptool sign --signtool "$(WINDOWSSDKVERBINPATH)\x64\signtool.exe" --customernumber MYCU-STOM-ERNU-MBER --customername "Tale" --productname "IPlug Example" --signid "9ca1bf1665add1b51891e59b1746d9ec67106e12" --extrasigningoptions "digest_sha256" --in "$(OUTDIR_OUTFILE).aaxplugin" --out "$(OUTDIR_OUTFILE).aaxplugin"
+
+del-aax :
+!IF EXIST("$(OUTDIR_OUTFILE).aaxplugin")
+	@del "$(OUTDIR_OUTFILE).aaxplugin"
+!ENDIF
 
 dist : clap vst2 vst3 sign-aax
 !IFDEF REMINDER
