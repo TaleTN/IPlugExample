@@ -100,8 +100,10 @@ VST3FLAGS = $(VST3FLAGS) /I VST3_SDK
 "$(OUTDIR)/$(PROJECT)_VST3.obj" : $(SOURCES) IPlug/IPlugVST3.h
 	$(CPP) $(CPPFLAGS) $(VST3FLAGS) /D VST3_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_VST3.asm" "$(PROJECT).cpp"
 
+AAXFLAGS = /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h
+
 "$(OUTDIR)/$(PROJECT)_AAX.obj" : $(SOURCES) IPlug/IPlugAAX.h
-	$(CPP) $(CPPFLAGS) /D AAX_API /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_AAX.asm" "$(PROJECT).cpp"
+	$(CPP) $(CPPFLAGS) $(AAXFLAGS) /D AAX_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_AAX.asm" "$(PROJECT).cpp"
 
 RESOURCES = \
 "$(PROJECT).rc" \
@@ -172,7 +174,7 @@ iplug : "$(OUTDIR)" $(IPLUGOBJ) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.o
 #	$(CPP) $(CPPFLAGS) $(VST3FLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugVST3.asm" IPlug/IPlugVST3.cpp
 #
 #"$(OUTDIR)/IPlugAAX.obj" : IPlug/IPlugAAX.cpp IPlug/Containers.h IPlug/Hosts.h IPlug/IGraphics.h IPlug/IParam.h IPlug/IPlugBase.h IPlug/IPlugStructs.h IPlug/IPlugAAX.h
-#	$(CPP) $(CPPFLAGS) /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugAAX.asm" IPlug/IPlugAAX.cpp
+#	$(CPP) $(CPPFLAGS) $(AAXFLAGS) /Fo"$(OUTDIR)/" /Fa"$(OUTDIR)/_IPlugAAX.asm" IPlug/IPlugAAX.cpp
 
 {IPlug}.cpp{$(OUTDIR)}.obj ::
 	$(CPP) $(CPPFLAGS) /Fo"$(OUTDIR)/" $<
@@ -181,7 +183,7 @@ iplug : "$(OUTDIR)" $(IPLUGOBJ) "$(OUTDIR)/IPlugCLAP.obj" "$(OUTDIR)/IPlugVST2.o
 	$(CPP) $(CPPFLAGS) $(VST3FLAGS) /Fo"$(OUTDIR)/" $**
 
 "$(OUTDIR)/IPlugAAX.obj" : IPlug/IPlugAAX.cpp
-	$(CPP) $(CPPFLAGS) /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /Fo"$(OUTDIR)/" $**
+	$(CPP) $(CPPFLAGS) $(AAXFLAGS) /Fo"$(OUTDIR)/" $**
 
 LIBPNGOBJ = \
 "$(OUTDIR)/png.obj" \
@@ -303,11 +305,13 @@ AAXOBJ = \
 
 aaxlib : "$(OUTDIR)" $(AAXOBJ)
 
+AAXFLAGS = $(AAXFLAGS) /D WIN32
+
 {AAX_SDK/Libs/AAXLibrary/source}.cpp{$(OUTDIR)}.obj ::
-	$(CPP) $(CPPFLAGS) /D WIN32 /I AAX_SDK/Interfaces /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /Fo"$(OUTDIR)/" $<
+	$(CPP) $(CPPFLAGS) $(AAXFLAGS) /I AAX_SDK/Interfaces /Fo"$(OUTDIR)/" $<
 
 "$(OUTDIR)/AAX_Exports.obj" : AAX_SDK/Interfaces/AAX_Exports.cpp
-	$(CPP) $(CPPFLAGS) /D WIN32 /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /Fo"$(OUTDIR)/" $**
+	$(CPP) $(CPPFLAGS) $(AAXFLAGS) /Fo"$(OUTDIR)/" $**
 
 OBJECTS = \
 $(IPLUGOBJ) \
