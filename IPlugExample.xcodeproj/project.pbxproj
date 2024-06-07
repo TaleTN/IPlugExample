@@ -137,6 +137,11 @@
 		3D31A5E6246D7760000BAC95 /* wdltypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DA246D7760000BAC95 /* wdltypes.h */; };
 		3D31A5E7246D7760000BAC95 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DB246D7760000BAC95 /* mutex.h */; };
 		3D31A5E8246D7760000BAC95 /* wdlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D31A5DC246D7760000BAC95 /* wdlstring.h */; };
+		3D341B822C12FE9300AADE36 /* utf8_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D341B812C12FE9300AADE36 /* utf8_extended.h */; };
+		3D341B832C12FE9300AADE36 /* utf8_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D341B812C12FE9300AADE36 /* utf8_extended.h */; };
+		3D341B842C12FE9300AADE36 /* utf8_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D341B812C12FE9300AADE36 /* utf8_extended.h */; };
+		3D341B852C12FE9300AADE36 /* utf8_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D341B812C12FE9300AADE36 /* utf8_extended.h */; };
+		3D341B862C12FE9300AADE36 /* utf8_extended.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D341B812C12FE9300AADE36 /* utf8_extended.h */; };
 		3D4364252AEAAE9800034825 /* IPlugVST3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D4364232AEAAE9800034825 /* IPlugVST3.cpp */; settings = {COMPILER_FLAGS = "-DRELEASE -IVST3_SDK"; }; };
 		3D4364262AEAAE9800034825 /* IPlugVST3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4364242AEAAE9800034825 /* IPlugVST3.h */; };
 		3D4364312AEAB6F900034825 /* baseiids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D43642A2AEAB6F900034825 /* baseiids.cpp */; settings = {COMPILER_FLAGS = "-DRELEASE -IVST3_SDK"; }; };
@@ -596,6 +601,7 @@
 		3D31A5DA246D7760000BAC95 /* wdltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdltypes.h; path = WDL/wdltypes.h; sourceTree = "<group>"; };
 		3D31A5DB246D7760000BAC95 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = WDL/mutex.h; sourceTree = "<group>"; };
 		3D31A5DC246D7760000BAC95 /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = WDL/wdlstring.h; sourceTree = "<group>"; };
+		3D341B812C12FE9300AADE36 /* utf8_extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf8_extended.h; path = WDL/utf8_extended.h; sourceTree = "<group>"; };
 		3D4364232AEAAE9800034825 /* IPlugVST3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST3.cpp; path = IPlug/IPlugVST3.cpp; sourceTree = "<group>"; };
 		3D4364242AEAAE9800034825 /* IPlugVST3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugVST3.h; path = IPlug/IPlugVST3.h; sourceTree = "<group>"; };
 		3D43642A2AEAB6F900034825 /* baseiids.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = baseiids.cpp; path = VST3_SDK/base/source/baseiids.cpp; sourceTree = "<group>"; };
@@ -1087,6 +1093,7 @@
 				3D31A5D1246D7760000BAC95 /* ptrlist.h */,
 				3D31A5D5246D7760000BAC95 /* queue.h */,
 				3D529CA82458525C00527485 /* swell */,
+				3D341B812C12FE9300AADE36 /* utf8_extended.h */,
 				3D31A5D6246D7760000BAC95 /* wdlatomic.h */,
 				3D31A5D7246D7760000BAC95 /* wdlcstring.h */,
 				3D31A5D9246D7760000BAC95 /* wdlendian.h */,
@@ -1278,6 +1285,7 @@
 				3D144CA128C4F93B003FA6F7 /* swell-gdi-internalpool.h in Headers */,
 				3D144CA228C4F93B003FA6F7 /* swell-internal.h in Headers */,
 				3D144CA328C4F93B003FA6F7 /* swell-types.h in Headers */,
+				3D341B842C12FE9300AADE36 /* utf8_extended.h in Headers */,
 				3D144CA428C4F93B003FA6F7 /* wdlatomic.h in Headers */,
 				3D144CA528C4F93B003FA6F7 /* wdlcstring.h in Headers */,
 				3D144CA628C4F93B003FA6F7 /* wdlendian.h in Headers */,
@@ -1342,6 +1350,7 @@
 				3D738585246E95D500582D74 /* swell-gdi-internalpool.h in Headers */,
 				3D738586246E95D500582D74 /* swell-internal.h in Headers */,
 				3D738588246E95D500582D74 /* swell-types.h in Headers */,
+				3D341B832C12FE9300AADE36 /* utf8_extended.h in Headers */,
 				3D738590246E95E100582D74 /* wdlatomic.h in Headers */,
 				3D738591246E95E100582D74 /* wdlcstring.h in Headers */,
 				3D738592246E95E100582D74 /* wdlendian.h in Headers */,
@@ -1406,6 +1415,7 @@
 				3DBF76DF2A3880010056A7AD /* swell-gdi-internalpool.h in Headers */,
 				3DBF76E02A3880010056A7AD /* swell-internal.h in Headers */,
 				3DBF76E12A3880010056A7AD /* swell-types.h in Headers */,
+				3D341B822C12FE9300AADE36 /* utf8_extended.h in Headers */,
 				3DBF76E22A3880010056A7AD /* wdlatomic.h in Headers */,
 				3DBF76E32A3880010056A7AD /* wdlcstring.h in Headers */,
 				3DBF76E42A3880010056A7AD /* wdlendian.h in Headers */,
@@ -1468,6 +1478,7 @@
 				3D00CE9124603C2000E2E5A4 /* swell-gdi-internalpool.h in Headers */,
 				3D529CAF245853D000527485 /* swell-internal.h in Headers */,
 				3D529CB2245853F000527485 /* swell-types.h in Headers */,
+				3D341B852C12FE9300AADE36 /* utf8_extended.h in Headers */,
 				3D31A5E2246D7760000BAC95 /* wdlatomic.h in Headers */,
 				3D31A5E3246D7760000BAC95 /* wdlcstring.h in Headers */,
 				3D31A5E5246D7760000BAC95 /* wdlendian.h in Headers */,
@@ -1532,6 +1543,7 @@
 				3DFC27972AEAA9A400109962 /* swell-gdi-internalpool.h in Headers */,
 				3DFC27982AEAA9A400109962 /* swell-internal.h in Headers */,
 				3DFC27992AEAA9A400109962 /* swell-types.h in Headers */,
+				3D341B862C12FE9300AADE36 /* utf8_extended.h in Headers */,
 				3DFC279A2AEAA9A400109962 /* wdlatomic.h in Headers */,
 				3DFC279B2AEAA9A400109962 /* wdlcstring.h in Headers */,
 				3DFC279C2AEAA9A400109962 /* wdlendian.h in Headers */,
