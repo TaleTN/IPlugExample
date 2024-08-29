@@ -100,6 +100,8 @@ VST3FLAGS = $(VST3FLAGS) /I VST3_SDK
 "$(OUTDIR)/$(PROJECT)_VST3.obj" : $(SOURCES) IPlug/IPlugVST3.h
 	$(CPP) $(CPPFLAGS) $(VST3FLAGS) /D VST3_API /Fo$@ /Fa"$(OUTDIR)/_$(PROJECT)_VST3.asm" "$(PROJECT).cpp"
 
+# TN: AAX SDK v2.8.0 doesn't require /wd5272 anymore, but v2.6.x and v2.7.x
+# probably do.
 AAXFLAGS = /I AAX_SDK/Interfaces/ACF /FIIPlug/IPlugAAX_Assert.h /wd5272
 
 "$(OUTDIR)/$(PROJECT)_AAX.obj" : $(SOURCES) IPlug/IPlugAAX.h
