@@ -22,6 +22,14 @@ PlugExample::PlugExample(void* const instanceInfo)
 	AddParam(kParamDepth, new IDoubleParam("Depth", 12.0, 0.0, 24.0, 1, "dB"));
 	AddParam(kParamShape, new IBoolParam("Shape", false, "Sine", "Square"));
 
+	// Pre-allocate (un)serialize buffers.
+	static const int globalSize = 1 * sizeof(bool);
+	static const int presetSize = 2 * sizeof(double) + 1 * sizeof(bool) + 10 * sizeof(double);
+
+	AllocPresetChunk(presetSize);
+	AllocStateChunk(globalSize + 1 * presetSize);
+	AllocBankChunk(globalSize + GetBankChunkSize(NPresets(), presetSize));
+
 	// Make some presets.
 	MakeDefaultPreset("Default");
 
@@ -262,4 +270,68 @@ void PlugExample::ProcessTremolo(const double* const* const inputs, double* cons
 	// Save LFO phase and smoothing filter state.
 	mLfoPhase = phase;
 	mSmoothState = filter;
+}
+
+bool PlugExample::SerializePreset(ByteChunk* const pChunk)
+{
+	bool savedOK = IPlugBase::SerializePreset(pChunk);
+	savedOK = savedOK && SerializeCustomPresetData(pChunk);
+
+	return savedOK;
+}
+
+int PlugExample::UnserializePreset(const ByteChunk* const pChunk, int pos, const int version)
+{
+	pos = IPlugBase::UnserializePreset(pChunk, pos, version);
+	pos = pos >= 0 ? UnserializeCustomPresetData(pChunk, pos) : pos;
+
+	return pos;
+}
+
+bool PlugExample::SerializeState(ByteChunk* const pChunk)
+{
+	bool savedOK = IPlugBase::SerializeState(pChunk);
+	savedOK = savedOK && SerializeCustomPresetData(pChunk);
+
+	return savedOK;
+}
+
+int PlugExample::UnserializeState(const ByteChunk* const pChunk, int pos)
+{
+	pos = IPlugBase::UnserializeState(pChunk, pos);
+	pos = pos >= 0 ? UnserializeCustomPresetData(pChunk, pos) : pos;
+
+	return pos;
+}
+
+bool PlugExample::SerializeCustomPresetData(ByteChunk* const pChunk)
+{
+	double f0 = 0.0, f1 = 1.0;
+
+	bool savedOK = pChunk->PutDouble(f0);
+	savedOK = savedOK && pChunk->PutDouble(f1);
+
+	for (int i = 2; i < 10 && savedOK; ++i)
+	{
+		const double fN = f0 + f1;
+		savedOK = pChunk->PutDouble(fN);
+
+		f0 = f1;
+		f1 = fN;
+	}
+
+	return savedOK;
+}
+
+int PlugExample::UnserializeCustomPresetData(const ByteChunk* const pChunk, int pos)
+{
+	for (int i = 0; i < 10 && pos >= 0; ++i)
+	{
+		double fN;
+		pos = pChunk->GetDouble(&fN, pos);
+
+		if (pos >= 0) DebugLog("IPlug: F[%d] = %g", i, fN);
+	}
+
+	return pos;
 }

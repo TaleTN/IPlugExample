@@ -27,8 +27,17 @@ public:
 
 	bool OnGUIRescale(int wantScale);
 
+	bool SerializePreset(ByteChunk* pChunk);
+	int UnserializePreset(const ByteChunk* pChunk, int startPos, int version = 0);
+
+	bool SerializeState(ByteChunk* pChunk);
+	int UnserializeState(const ByteChunk* pChunk, int startPos);
+
 private:
 	void ProcessTremolo(const double* const* inputs, double* const* outputs, int nFrames);
+
+	bool SerializeCustomPresetData(ByteChunk* pChunk);
+	int UnserializeCustomPresetData(const ByteChunk* pChunk, int startPos);
 
 	double WDL_FIXALIGN mLfoPhase, mLfoPeriod, mAmpDepth;
 	double WDL_FIXALIGN mSmoothState, mSmoothCoeff;
