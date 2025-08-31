@@ -36,7 +36,8 @@
 	// PLUG_FACTORY, each with leading underscore (e.g. PlugExample.exp
 	// with entries _PlugExample_Entry and _PlugExample_Factory).
 
-	// To-do: Set NSPrincipalClass in AU-Info.plist to VIEW_CLASS.
+	// To-do: Set AudioComponents factoryFunction and NSPrincipalClass in
+	// AU-Info.plist to PLUG_FACTORY and VIEW_CLASS.
 #endif
 
 // Interpreted as 0xMajrMnBg.
@@ -45,7 +46,7 @@
 #define VERSIONINFO_STR        "0.8.0"
 
 #define VERSIONINFO_PRERELEASE // Define if alpha, beta, or RC
-#define VERSIONINFO_COPYRIGHT "2020-2023 Theo Niessink"
+#define VERSIONINFO_COPYRIGHT "2020-2025 Theo Niessink"
 
 // Windows version info resource (optional).
 #ifdef _WIN32
